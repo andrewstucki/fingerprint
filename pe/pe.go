@@ -44,14 +44,25 @@ type VersionInfo struct {
 
 // Info contains high level fingerprinting an analysis of a PE file.
 type Info struct {
-	Sections                     []Section           `json:"sections"`
-	FileVersionInfo              []VersionInfo       `json:"version_info"`
-	Header                       Header              `json:"header"`
-	Imports                      map[string][]string `json:"imports"`
-	ContainedResourcesByType     map[string]int      `json:"containedResourcesByType"`
-	ContainedResourcesByLanguage map[string]int      `json:"containedResourcesByLanguage"`
-	Resources                    []Resource          `json:"resources"`
-	ImpHash                      string              `json:"imphash"`
+	Sections                     []Section           `json:"sections,omitempty"`
+	FileVersionInfo              []VersionInfo       `json:"version_info,omitempty"`
+	Header                       Header              `json:"header,omitempty"`
+	Imports                      map[string][]string `json:"imports,omitempty"`
+	Exports                      []string            `json:"exports,omitempty"`
+	ContainedResourcesByType     map[string]int      `json:"containedResourcesByType,omitempty"`
+	ContainedResourcesByLanguage map[string]int      `json:"containedResourcesByLanguage,omitempty"`
+	Resources                    []Resource          `json:"resources,omitempty"`
+	Packer                       string              `json:"packer,omitempty"`
+	ImpHash                      string              `json:"imphash,omitempty"`
+}
+
+func getPacker(f *pe.File) string {
+	for _, section := range f.Sections {
+		if section.Name == "UPX0" {
+			return "upx"
+		}
+	}
+	return ""
 }
 
 // Parse parses the PE and returns information about it or errors.
@@ -78,6 +89,11 @@ func Parse(r io.ReaderAt) (*Info, error) {
 		architecture = "unknown"
 	}
 
+	exportSymbols, err := exports(peFile)
+	if err != nil {
+		return nil, err
+	}
+
 	importSymbols, imphash, err := imphash(peFile)
 	if err != nil {
 		return nil, err
@@ -96,6 +112,8 @@ func Parse(r io.ReaderAt) (*Info, error) {
 		ContainedResourcesByType:     make(map[string]int),
 		ContainedResourcesByLanguage: make(map[string]int),
 		Imports:                      importSymbols,
+		Exports:                      exportSymbols,
+		Packer:                       getPacker(peFile),
 	}
 	for i, section := range peFile.Sections {
 		data, err := section.Data()

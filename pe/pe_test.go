@@ -12,6 +12,7 @@ import (
 func TestBinaries(t *testing.T) {
 	binaries := []string{
 		"calc.exe",
+		"avcodec.dll",
 	}
 	for _, binary := range binaries {
 		t.Run(binary, func(t *testing.T) {

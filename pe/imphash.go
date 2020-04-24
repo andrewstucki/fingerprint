@@ -40,14 +40,29 @@ func importDirectory(f *pe.File) pe.DataDirectory {
 	return header.DataDirectory[pe.IMAGE_DIRECTORY_ENTRY_IMPORT]
 }
 
-func importData(f *pe.File) ([]byte, uint32, uint32, error) {
-	imports := importDirectory(f)
-	if imports.Size == 0 {
+func exportDirectory(f *pe.File) pe.DataDirectory {
+	var emptyDirectory pe.DataDirectory
+	if f.Machine == pe.IMAGE_FILE_MACHINE_AMD64 {
+		header := f.OptionalHeader.(*pe.OptionalHeader64)
+		if header.NumberOfRvaAndSizes < pe.IMAGE_DIRECTORY_ENTRY_EXPORT+1 {
+			return emptyDirectory
+		}
+		return header.DataDirectory[pe.IMAGE_DIRECTORY_ENTRY_EXPORT]
+	}
+	header := f.OptionalHeader.(*pe.OptionalHeader32)
+	if header.NumberOfRvaAndSizes < pe.IMAGE_DIRECTORY_ENTRY_EXPORT+1 {
+		return emptyDirectory
+	}
+	return header.DataDirectory[pe.IMAGE_DIRECTORY_ENTRY_EXPORT]
+}
+
+func directoryData(f *pe.File, directory pe.DataDirectory) ([]byte, uint32, uint32, error) {
+	if directory.Size == 0 {
 		return nil, 0, 0, nil
 	}
 	var section *pe.Section
 	for _, s := range f.Sections {
-		if s.VirtualAddress <= imports.VirtualAddress && imports.VirtualAddress < s.VirtualAddress+s.VirtualSize {
+		if s.VirtualAddress <= directory.VirtualAddress && directory.VirtualAddress < s.VirtualAddress+s.VirtualSize {
 			section = s
 			break
 		}
@@ -60,9 +75,15 @@ func importData(f *pe.File) ([]byte, uint32, uint32, error) {
 	if err != nil {
 		return nil, 0, 0, err
 	}
+	return data, directory.VirtualAddress, section.VirtualAddress, nil
+}
 
-	// seek to the virtual address specified in the import data directory
-	return data, imports.VirtualAddress, section.VirtualAddress, nil
+func importData(f *pe.File) ([]byte, uint32, uint32, error) {
+	return directoryData(f, importDirectory(f))
+}
+
+func exportData(f *pe.File) ([]byte, uint32, uint32, error) {
+	return directoryData(f, exportDirectory(f))
 }
 
 func normalizeLibraryName(name string) string {
@@ -74,6 +95,39 @@ func normalizeLibraryName(name string) string {
 		return name[:len(name)-4]
 	}
 	return name
+}
+
+func exports(f *pe.File) ([]string, error) {
+	if f.OptionalHeader == nil {
+		return nil, nil
+	}
+	data, exportAddress, sectionAddress, err := exportData(f)
+	if err != nil {
+		return nil, err
+	}
+	if data == nil {
+		return nil, nil
+	}
+	tableData := data[exportAddress-sectionAddress:]
+	if len(tableData) < 40 {
+		return nil, nil
+	}
+	exportCount := int(binary.LittleEndian.Uint32(tableData[24:30]))
+	nameOffset := binary.LittleEndian.Uint32(tableData[32:36])
+	nameRVATable := data[nameOffset-sectionAddress:]
+	// The pointers are 32 bits each and are relative to the image base
+	if len(nameRVATable) < 4*exportCount {
+		return nil, nil
+	}
+
+	functions := make([]string, exportCount)
+	for offset := 0; offset < exportCount; offset++ {
+		start := offset * 4
+		symbolOffset := binary.LittleEndian.Uint32(nameRVATable[start : start+4])
+		functions[offset] = readString(data, int(symbolOffset-sectionAddress))
+	}
+
+	return functions, nil
 }
 
 func imphash(f *pe.File) (map[string][]string, string, error) {
@@ -98,7 +152,11 @@ func imphash(f *pe.File) (map[string][]string, string, error) {
 		directoryData := tableData[offset:]
 		firstThunk := binary.LittleEndian.Uint32(directoryData[0:4])
 		if firstThunk == 0 {
-			break
+			// check to see if the image is not bound
+			firstThunk = binary.LittleEndian.Uint32(directoryData[16:20])
+			if firstThunk == 0 {
+				break
+			}
 		}
 
 		name := binary.LittleEndian.Uint32(directoryData[12:16])
