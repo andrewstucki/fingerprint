@@ -1,1 +1,1 @@
-# Fingerprinting for binaries
+# Fingerprinting for files
