@@ -129,6 +129,15 @@ func parseEntry(virtualAddress uint32, root string, global, base []byte) ([]Reso
 	}
 	entryOffset := binary.LittleEndian.Uint32(entry[0:4])
 	entrySize := int(binary.LittleEndian.Uint32(entry[4:8]))
+	if entryOffset < virtualAddress {
+		// we don't fully handle upx packed resources for now which point
+		// to the locations of the compressed resouces outside of
+		// the Resource Data section
+		return []Resource{
+			Resource{Type: root, Language: languageName(language), Size: entrySize},
+		}, nil
+	}
+
 	data, err := followOffset(global, entryOffset-virtualAddress, entrySize)
 	if err != nil {
 		return nil, err
@@ -140,7 +149,7 @@ func parseEntry(virtualAddress uint32, root string, global, base []byte) ([]Reso
 		resourceMime = kind.MIME.Value
 	}
 	return []Resource{
-		Resource{Type: root, Language: languageName(language), data: resourceData, MIME: resourceMime, SHA256: hex.EncodeToString(hash[:])},
+		Resource{Type: root, Language: languageName(language), Size: entrySize, data: resourceData, MIME: resourceMime, SHA256: hex.EncodeToString(hash[:])},
 	}, nil
 }
 

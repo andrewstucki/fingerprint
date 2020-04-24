@@ -20,18 +20,19 @@ type Section struct {
 
 // Header contains information found in a PE header.
 type Header struct {
-	CompilationTimestamp time.Time `json:"compilationTimestamp"`
-	Entrypoint           uint32    `json:"entrypoint"`
-	TargetMachine        string    `json:"targetMachine"`
-	ContainedSections    int       `json:"containedSections"`
+	CompilationTimestamp *time.Time `json:"compilationTimestamp,omitempty"`
+	Entrypoint           uint32     `json:"entrypoint"`
+	TargetMachine        string     `json:"targetMachine"`
+	ContainedSections    int        `json:"containedSections"`
 }
 
 // Resource represents a resource entry embedded in a PE file.
 type Resource struct {
 	Type     string `json:"type"`
 	Language string `json:"language"`
-	SHA256   string `json:"sha256"`
-	MIME     string `json:"mime"`
+	SHA256   string `json:"sha256,omitempty"`
+	MIME     string `json:"mime,omitempty"`
+	Size     int    `json:"size"`
 
 	data []byte
 }
@@ -100,10 +101,17 @@ func Parse(r io.ReaderAt) (*Info, error) {
 	}
 
 	sectionSize := len(peFile.Sections)
+	var compiledAt *time.Time
+	timestamp := int64(peFile.FileHeader.TimeDateStamp)
+	if timestamp != 0 {
+		compiled := time.Unix(timestamp, 0)
+		compiledAt = &compiled
+	}
+
 	info := &Info{
 		ImpHash: imphash,
 		Header: Header{
-			CompilationTimestamp: time.Unix(int64(peFile.FileHeader.TimeDateStamp), 0),
+			CompilationTimestamp: compiledAt,
 			Entrypoint:           entrypoint,
 			TargetMachine:        architecture,
 			ContainedSections:    sectionSize,

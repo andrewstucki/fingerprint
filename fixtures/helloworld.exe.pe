@@ -1,0 +1,91 @@
+{
+  "sections": [
+    {
+      "name": ".text",
+      "virtualAddress": 4096,
+      "virtualSize": 642528,
+      "rawSize": 642560,
+      "entropy": 5.91,
+      "md5": "5803aaa340571c292ea50c963c149393"
+    },
+    {
+      "name": ".rdata",
+      "virtualAddress": 647168,
+      "virtualSize": 808925,
+      "rawSize": 808960,
+      "entropy": 5.23,
+      "md5": "7086a2c570638b197ba9a7a787733941"
+    },
+    {
+      "name": ".data",
+      "virtualAddress": 1458176,
+      "virtualSize": 277160,
+      "rawSize": 84992,
+      "entropy": 4.08,
+      "md5": "59511eb44d960bd896b7c1badc18b2ae"
+    },
+    {
+      "name": ".idata",
+      "virtualAddress": 1736704,
+      "virtualSize": 1090,
+      "rawSize": 1536,
+      "entropy": 3.44,
+      "md5": "579191a6cc342da500b8b041834fda14"
+    },
+    {
+      "name": ".symtab",
+      "virtualAddress": 1740800,
+      "virtualSize": 122136,
+      "rawSize": 122368,
+      "entropy": 5.2,
+      "md5": "17641dcfdd2e6848111eabcc48c67857"
+    }
+  ],
+  "header": {
+    "entrypoint": 387040,
+    "targetMachine": "x64",
+    "containedSections": 5
+  },
+  "imports": {
+    "kernel32.dll": [
+      "WriteFile",
+      "WriteConsoleW",
+      "WaitForMultipleObjects",
+      "WaitForSingleObject",
+      "VirtualQuery",
+      "VirtualFree",
+      "VirtualAlloc",
+      "SwitchToThread",
+      "SuspendThread",
+      "SetWaitableTimer",
+      "SetUnhandledExceptionFilter",
+      "SetProcessPriorityBoost",
+      "SetEvent",
+      "SetErrorMode",
+      "SetConsoleCtrlHandler",
+      "ResumeThread",
+      "PostQueuedCompletionStatus",
+      "LoadLibraryA",
+      "LoadLibraryW",
+      "SetThreadContext",
+      "GetThreadContext",
+      "GetSystemInfo",
+      "GetSystemDirectoryA",
+      "GetStdHandle",
+      "GetQueuedCompletionStatus",
+      "GetProcessAffinityMask",
+      "GetProcAddress",
+      "GetEnvironmentStringsW",
+      "GetConsoleMode",
+      "FreeEnvironmentStringsW",
+      "ExitProcess",
+      "DuplicateHandle",
+      "CreateThread",
+      "CreateIoCompletionPort",
+      "CreateEventA",
+      "CloseHandle",
+      "AddVectoredExceptionHandler"
+    ]
+  },
+  "imphash": "91802a615b3a5c4bcc05bc5f66a5b219"
+}

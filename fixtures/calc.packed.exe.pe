@@ -1,0 +1,619 @@
+{
+  "sections": [
+    {
+      "name": "UPX0",
+      "virtualAddress": 4096,
+      "virtualSize": 622592,
+      "rawSize": 0,
+      "entropy": 0,
+      "md5": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+      "name": "UPX1",
+      "virtualAddress": 626688,
+      "virtualSize": 319488,
+      "rawSize": 315904,
+      "entropy": 7.9,
+      "md5": "95a1359c96fc0322d471d4ae6a85dbe7"
+    },
+    {
+      "name": ".rsrc",
+      "virtualAddress": 946176,
+      "virtualSize": 94208,
+      "rawSize": 90624,
+      "entropy": 6.38,
+      "md5": "e10545915539e091db28fa365b2d1a54"
+    }
+  ],
+  "version_info": [
+    {
+      "Name": "CompanyName",
+      "Value": "Microsoft Corporation"
+    },
+    {
+      "Name": "FileDescription",
+      "Value": "Windows Calculator"
+    },
+    {
+      "Name": "FileVersion",
+      "Value": "6.1.7600.16385 (win7_rtm.090713-1255)"
+    },
+    {
+      "Name": "InternalName",
+      "Value": "CALC"
+    },
+    {
+      "Name": "LegalCopyright",
+      "Value": "© Microsoft Corporation. All rights reserved."
+    },
+    {
+      "Name": "OriginalFilename",
+      "Value": "CALC.EXE"
+    },
+    {
+      "Name": "ProductName",
+      "Value": "Microsoft® Windows® Operating System"
+    },
+    {
+      "Name": "ProductVersion",
+      "Value": "6.1"
+    }
+  ],
+  "header": {
+    "compilationTimestamp": "2009-07-13T19:57:08-04:00",
+    "entrypoint": 941568,
+    "targetMachine": "x64",
+    "containedSections": 3
+  },
+  "imports": {
+    "ADVAPI32.dll": [
+      "EventWrite"
+    ],
+    "GDI32.dll": [
+      "LineTo"
+    ],
+    "KERNEL32.DLL": [
+      "LoadLibraryA",
+      "ExitProcess",
+      "GetProcAddress",
+      "VirtualProtect"
+    ],
+    "RPCRT4.dll": [
+      "UuidCreate"
+    ],
+    "USER32.dll": [
+      "GetDC"
+    ],
+    "UxTheme.dll": [
+      "IsThemeActive"
+    ],
+    "VERSION.dll": [
+      "VerQueryValueW"
+    ],
+    "WINMM.dll": [
+      "timeGetTime"
+    ],
+    "gdiplus.dll": [
+      "GdipFree"
+    ],
+    "msvcrt.dll": [
+      "time"
+    ],
+    "ntdll.dll": [
+      "WinSqmAddToStream"
+    ],
+    "ole32.dll": [
+      "CoInitialize"
+    ]
+  },
+  "containedResourcesByType": {
+    "IMAGE": 69,
+    "MUI": 1,
+    "RT_BITMAP": 1,
+    "RT_GROUP_ICON": 1,
+    "RT_ICON": 16,
+    "RT_MANIFEST": 1,
+    "RT_VERSION": 1,
+    "WEVT_TEMPLATE": 1
+  },
+  "containedResourcesByLanguage": {
+    "English - United States": 91
+  },
+  "resources": [
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4657
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4069
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4215
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4656
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4918
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 2995
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3040
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3256
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3380
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3749
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3774
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4427
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4126
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4706
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4955
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4189
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3097
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3023
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 2965
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 2921
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3496
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3653
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3827
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 5454
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4372
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3105
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4561
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3121
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4877
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3396
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 5201
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3792
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3969
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4003
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4856
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 5592
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4529
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 5512
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4595
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3232
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3056
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3012
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3871
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4117
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4246
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 2957
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 6855
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4523
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3128
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4718
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3222
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 5159
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3578
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 5560
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3830
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4164
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4204
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 5178
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 6209
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4932
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 6595
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4981
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3349
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3168
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 3066
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4243
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4586
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 4766
+    },
+    {
+      "type": "IMAGE",
+      "language": "English - United States",
+      "size": 2993
+    },
+    {
+      "type": "MUI",
+      "language": "English - United States",
+      "size": 288
+    },
+    {
+      "type": "WEVT_TEMPLATE",
+      "language": "English - United States",
+      "size": 4750
+    },
+    {
+      "type": "RT_BITMAP",
+      "language": "English - United States",
+      "size": 22042
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "2d4d6dcd309e5018fc8b6445cf5fa5a2f08bb2464efe64762e8cd585be751fe7",
+      "mime": "Data",
+      "size": 2664
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "5087336fad85275ed71107c93fefbbe21274702c67c6ad7095311ff0ce821b43",
+      "mime": "Data",
+      "size": 1640
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "f11c973df6d3ae088f24b3c0dddce432ede3bd6ddbb8d1c25d4dfbbcca3bc258",
+      "mime": "Data",
+      "size": 744
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "fcc7d3d98399799a67676b153a3c9eb27308794d6aed486c736b088f4aee5a69",
+      "mime": "Data",
+      "size": 488
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "4e9f0ea6c6dbbde1ecd6f4f365e203ce8c6883230a49c0e815a88985aaf8943d",
+      "mime": "Data",
+      "size": 296
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "3a3053c76b4459f4505dd3bd6ceb7a8ab95f7de8e17796def1fe90ccd82d83bf",
+      "mime": "Data",
+      "size": 5672
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "9f951f4abd8f077970fd8d328abcf445350aa7a2247aa471bb83c682463265f0",
+      "mime": "Data",
+      "size": 3752
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "9b8dcde37134879d62345221683e6ef66a6382250df4f6951e06ed5cc56cb928",
+      "mime": "Data",
+      "size": 2216
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "d93b4926e0436667ff0a8fc0542e37ef3a343f37d9c4dac18b0dca712ac37807",
+      "mime": "Data",
+      "size": 1736
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "5dfd6400208ff192380767e2f9478a930bed390874493a69cb6f9f73c0a7d711",
+      "mime": "Data",
+      "size": 1384
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "78db6eff280837a6baf4228a80c6ac7ba176a9987b74371311a8709751e21647",
+      "mime": "image/png",
+      "size": 27569
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "6a6d2f9a3aa3691e53e59f4520494d26a370aad69d2392352d21fa5d3ddac6f0",
+      "mime": "Data",
+      "size": 16936
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "16b55a47b4e044d2626dcfada06061e15b6182457418cb81d6396a636ecac952",
+      "mime": "Data",
+      "size": 9640
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "d3250e8fe29b65228440eb15f22f414cad95cf54b46497fe43ae2fa8bac0c755",
+      "mime": "Data",
+      "size": 4264
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "ed9c4c5c609f4a40cdef71318cb3a5328b0eeb68fd910c0120a947a42bd344d0",
+      "mime": "Data",
+      "size": 2440
+    },
+    {
+      "type": "RT_ICON",
+      "language": "English - United States",
+      "sha256": "2f85c85e4f39ee79bce91ff74a3b87f03aed8128469b3f9472283221eff8b5a4",
+      "mime": "Data",
+      "size": 1128
+    },
+    {
+      "type": "RT_GROUP_ICON",
+      "language": "English - United States",
+      "sha256": "a2160d96a1fc0c94875844e0cefeb502a7afef890ce4c5b0fadeb2768d8d039e",
+      "mime": "image/vnd.microsoft.icon",
+      "size": 230
+    },
+    {
+      "type": "RT_VERSION",
+      "language": "English - United States",
+      "sha256": "fb79b4755a6baec7406d34c5afcb43d98a4d9870d5ebd447f96d77f86b2b4f02",
+      "mime": "Data",
+      "size": 892
+    },
+    {
+      "type": "RT_MANIFEST",
+      "language": "English - United States",
+      "sha256": "9c32df4118c1601d8d06e8a8bbd1ae72202fa81d429ede9218bdb9b8ca7743f2",
+      "mime": "Data",
+      "size": 1169
+    }
+  ],
+  "packer": "upx",
+  "imphash": "7884eb17f67ffbbf586a7b34679c39bf"
+}

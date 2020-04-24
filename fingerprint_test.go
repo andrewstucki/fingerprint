@@ -12,6 +12,8 @@ import (
 func TestBinaries(t *testing.T) {
 	binaries := []string{
 		"calc.exe",
+		"calc.packed.exe",
+		"helloworld.exe",
 		"avcodec.dll",
 	}
 	for _, binary := range binaries {
