@@ -1,0 +1,1 @@
+# Fingerprinting for binaries
