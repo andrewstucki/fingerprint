@@ -14,8 +14,8 @@ type Section struct {
 	Name    string  `json:"name"`
 	Address uint64  `json:"address"`
 	Size    uint64  `json:"size"`
-	Entropy float64 `json:"entropy"`
-	MD5     string  `json:"md5"`
+	Entropy float64 `json:"entropy,omitempty"`
+	MD5     string  `json:"md5,omitempty"`
 }
 
 // Architecture represents a fat file architecture
@@ -104,17 +104,25 @@ func parse(machoFile *macho.File) (*Architecture, error) {
 
 	sections := make([]Section, len(machoFile.Sections))
 	for i, section := range machoFile.Sections {
+		var md5String string
+		var entropy float64
+
 		data, err := section.Data()
 		if err != nil {
-			return nil, err
+			if err != io.EOF {
+				return nil, err
+			}
+		} else {
+			md5hash := md5.Sum(data)
+			md5String = hex.EncodeToString(md5hash[:])
+			entropy = internal.Entropy(data)
 		}
-		md5hash := md5.Sum(data)
 		sections[i] = Section{
 			Name:    section.Name,
 			Address: section.Addr,
 			Size:    section.Size,
-			Entropy: internal.Entropy(data),
-			MD5:     hex.EncodeToString(md5hash[:]),
+			Entropy: entropy,
+			MD5:     md5String,
 		}
 	}
 

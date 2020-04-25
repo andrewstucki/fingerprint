@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"runtime"
 	"sync"
 
 	"github.com/andrewstucki/fingerprint"
@@ -68,17 +69,16 @@ func main() {
 
 func fingerprintDirectory(dir *os.File) ([]file, error) {
 	var mutex sync.Mutex
-	var wg sync.WaitGroup
 	files := []file{}
 
+	pool := newPool(runtime.NumCPU())
+	defer pool.Release()
 	if err := filepath.Walk(dir.Name(), func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
 		if !info.IsDir() {
-			wg.Add(1)
-			go func() {
-				defer wg.Done()
+			pool.Enqueue(func() {
 				f, err := os.Open(path)
 				if err != nil {
 					fmt.Fprintf(os.Stderr, "Unable to read '%s': %v\n", path, err)
@@ -92,13 +92,13 @@ func fingerprintDirectory(dir *os.File) ([]file, error) {
 				mutex.Lock()
 				files = append(files, file{Info: info, Name: path})
 				mutex.Unlock()
-			}()
+			})
 		}
 		return nil
 	}); err != nil {
 		return nil, err
 	}
-	wg.Wait()
+	pool.Wait()
 
 	return files, nil
 }
