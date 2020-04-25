@@ -8,6 +8,7 @@ import (
 	"io"
 	"unicode/utf8"
 
+	"github.com/andrewstucki/fingerprint/elf"
 	"github.com/andrewstucki/fingerprint/macho"
 	"github.com/andrewstucki/fingerprint/pe"
 	"github.com/h2non/filetype"
@@ -27,6 +28,7 @@ type Info struct {
 	Size   int         `json:"size"`
 	PE     *pe.Info    `json:"pe,omitempty"`
 	MachO  *macho.Info `json:"macho,omitempty"`
+	Elf    *elf.Info   `json:"elf,omitempty"`
 }
 
 // Reader is the interface that must be satisfied for parsing a stream of data.
@@ -129,6 +131,12 @@ func Parse(r Reader, size int) (*Info, error) {
 			return nil, err
 		}
 		info.MachO = machoInfo
+	case "application/x-executable":
+		elfInfo, err := elf.Parse(r)
+		if err != nil {
+			return nil, err
+		}
+		info.Elf = elfInfo
 	}
 
 	return info, nil
