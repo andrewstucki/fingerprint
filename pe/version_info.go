@@ -27,12 +27,14 @@ func readStrings(data []byte) []VersionInfo {
 			key := readUnicode(stringData[6:])
 			paddingOffset := len(key)*2 + 8
 			paddedOffset := paddingOffset + (paddingOffset % 4)
-			value := readUnicode(stringData[paddedOffset:])
-			if value != "" {
-				childStrings = append(childStrings, VersionInfo{
-					Name:  key,
-					Value: value,
-				})
+			if len(stringData) >= paddedOffset+1 {
+				value := readUnicode(stringData[paddedOffset:])
+				if value != "" {
+					childStrings = append(childStrings, VersionInfo{
+						Name:  key,
+						Value: value,
+					})
+				}
 			}
 		}
 		offset += int(stringSize)

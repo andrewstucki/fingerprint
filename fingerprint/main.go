@@ -77,13 +77,16 @@ func fingerprintDirectory(dir *os.File) ([]file, error) {
 		if err != nil {
 			return err
 		}
-		if !info.IsDir() {
+		isSymlink := info.Mode()&os.ModeSymlink > 0
+		isEmpty := info.Size() == 0
+		if !info.IsDir() && !isSymlink && !isEmpty {
 			pool.Enqueue(func() {
 				f, err := os.Open(path)
 				if err != nil {
 					fmt.Fprintf(os.Stderr, "Unable to read '%s': %v\n", path, err)
 					return
 				}
+				defer f.Close()
 				info, err := fingerprint.Parse(f, int(info.Size()))
 				if err != nil {
 					fmt.Fprintf(os.Stderr, "Unable to fingerprint '%s': %v\n", path, err)
