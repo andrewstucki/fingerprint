@@ -6,6 +6,8 @@ import (
 	"encoding/hex"
 	"io"
 	"time"
+
+	"github.com/andrewstucki/fingerprint/internal"
 )
 
 // Section contains information about a section in a PE file.
@@ -134,7 +136,7 @@ func Parse(r io.ReaderAt) (*Info, error) {
 			VirtualAddress: section.VirtualAddress,
 			VirtualSize:    section.VirtualSize,
 			RawSize:        section.Size,
-			Entropy:        entropy(data),
+			Entropy:        internal.Entropy(data),
 			MD5:            hex.EncodeToString(hashed[:]),
 		}
 

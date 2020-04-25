@@ -1,0 +1,30 @@
+{
+  "architectures": [
+    {
+      "cpu": "x86_64",
+      "sections": [
+        {
+          "name": "upxTEXT",
+          "address": 4294968240,
+          "size": 613456,
+          "entropy": 7.89,
+          "md5": "51c804ddbae53d6968beca31db4d4e96"
+        }
+      ],
+      "packer": "upx"
+    },
+    {
+      "cpu": "x86_64",
+      "sections": [
+        {
+          "name": "upxTEXT",
+          "address": 4294968240,
+          "size": 609360,
+          "entropy": 7.89,
+          "md5": "d08d8804df740cdaa4b863b8c649acdf"
+        }
+      ],
+      "packer": "upx"
+    }
+  ]
+}

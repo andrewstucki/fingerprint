@@ -1,5 +1,11 @@
 github.com/andrewstucki/filetype v1.0.13-0.20200422184044-a016e5085d46 h1:579HeGNpgHhROA8WqoYXR3KbGHjwb1xlE5u1OWZN8Pc=
 github.com/andrewstucki/filetype v1.0.13-0.20200422184044-a016e5085d46/go.mod h1:319b3zT68BvV+WRj7cwy856M2ehB3HqNOt6sy1HndBY=
+github.com/andrewstucki/filetype v1.0.13-0.20200425031130-0002fd52509a h1:Ls8CWmDO2Dtz9ZUgLdtxLXEwE1HmtSIz8tV9AFlhOqo=
+github.com/andrewstucki/filetype v1.0.13-0.20200425031130-0002fd52509a/go.mod h1:319b3zT68BvV+WRj7cwy856M2ehB3HqNOt6sy1HndBY=
+github.com/andrewstucki/filetype v1.0.13-0.20200425031337-40726cb2be59 h1:jJLB7IBX31xhEviJypJLII16evjQbARX0CRrUECaHYM=
+github.com/andrewstucki/filetype v1.0.13-0.20200425031337-40726cb2be59/go.mod h1:319b3zT68BvV+WRj7cwy856M2ehB3HqNOt6sy1HndBY=
+github.com/andrewstucki/filetype v1.0.13-0.20200425031818-634ae08fdca3 h1:bGOOEyO0GaBPDrMD2c2ApoCCFKEkIyhyZ0h4J52ZhY4=
+github.com/andrewstucki/filetype v1.0.13-0.20200425031818-634ae08fdca3/go.mod h1:319b3zT68BvV+WRj7cwy856M2ehB3HqNOt6sy1HndBY=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

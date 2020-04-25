@@ -1,0 +1,150 @@
+{
+  "mime": "application/x-mach-binary",
+  "ssdeep": "48:vw3PzCeZStRNIKyjGsDUDIvXg3i3aUMZR37ash3tn:vwfzhtUDP3L9n",
+  "md5": "bb6e006d4ceffe99f25d18215862e69e",
+  "sha1": "1c38f58cf13510c697f7656656eaa90a5929fa61",
+  "sha256": "22dcb80056caf7ade1c4f6c67b3e0f7fdfda0204777df7d5e29c0a25aa942685",
+  "size": 24816,
+  "macho": {
+    "architectures": [
+      {
+        "cpu": "x86",
+        "sections": [
+          {
+            "name": "__text",
+            "address": 8032,
+            "size": 45,
+            "entropy": 3.95,
+            "md5": "f0f6b664aa565a79aae95170188c86e5"
+          },
+          {
+            "name": "__symbol_stub",
+            "address": 8078,
+            "size": 6,
+            "entropy": 2.25,
+            "md5": "e1d1838a1ade7bcc214b34ed304e221c"
+          },
+          {
+            "name": "__stub_helper",
+            "address": 8084,
+            "size": 22,
+            "entropy": 2.62,
+            "md5": "9c510584cd8d33a80f1487c3d7f300f2"
+          },
+          {
+            "name": "__cstring",
+            "address": 8106,
+            "size": 13,
+            "entropy": 3.18,
+            "md5": "42506346e9e4b7d35b13978983e627b0"
+          },
+          {
+            "name": "__unwind_info",
+            "address": 8120,
+            "size": 72,
+            "entropy": 1.58,
+            "md5": "63c30e2022b522b31999cc6d06c50175"
+          },
+          {
+            "name": "__nl_symbol_ptr",
+            "address": 8192,
+            "size": 4,
+            "entropy": 0,
+            "md5": "f1d3ff8443297732862df21dc4e57262"
+          },
+          {
+            "name": "__la_symbol_ptr",
+            "address": 8196,
+            "size": 4,
+            "entropy": 1.5,
+            "md5": "9a762fcb4169dc2355f8ad4206ade9d0"
+          },
+          {
+            "name": "__data",
+            "address": 8200,
+            "size": 4,
+            "entropy": 0,
+            "md5": "f1d3ff8443297732862df21dc4e57262"
+          }
+        ],
+        "libraries": [
+          "/usr/lib/libSystem.B.dylib"
+        ],
+        "imports": [
+          "_printf",
+          "dyld_stub_binder"
+        ],
+        "symhash": "e4cce50a95ec8387770df669df413dd2"
+      },
+      {
+        "cpu": "x86_64",
+        "sections": [
+          {
+            "name": "__text",
+            "address": 4294971232,
+            "size": 42,
+            "entropy": 4.04,
+            "md5": "77166fb4124bfa15ceebf0b9425cda23"
+          },
+          {
+            "name": "__stubs",
+            "address": 4294971274,
+            "size": 6,
+            "entropy": 1.79,
+            "md5": "b2126cbaeffb7569cb39b7afeafdbc68"
+          },
+          {
+            "name": "__stub_helper",
+            "address": 4294971280,
+            "size": 26,
+            "entropy": 3.04,
+            "md5": "1c7f084181669b89795b095ef4a1b776"
+          },
+          {
+            "name": "__cstring",
+            "address": 4294971306,
+            "size": 13,
+            "entropy": 3.18,
+            "md5": "42506346e9e4b7d35b13978983e627b0"
+          },
+          {
+            "name": "__unwind_info",
+            "address": 4294971320,
+            "size": 72,
+            "entropy": 1.58,
+            "md5": "5a85d345ab9f929bf8ee00e141401105"
+          },
+          {
+            "name": "__nl_symbol_ptr",
+            "address": 4294971392,
+            "size": 8,
+            "entropy": 0,
+            "md5": "7dea362b3fac8e00956a4952a3d4f474"
+          },
+          {
+            "name": "__got",
+            "address": 4294971400,
+            "size": 8,
+            "entropy": 0,
+            "md5": "7dea362b3fac8e00956a4952a3d4f474"
+          },
+          {
+            "name": "__la_symbol_ptr",
+            "address": 4294971408,
+            "size": 8,
+            "entropy": 1.55,
+            "md5": "a8f250ea011781d751ad55c91ce4d39c"
+          }
+        ],
+        "libraries": [
+          "/usr/lib/libSystem.B.dylib"
+        ],
+        "imports": [
+          "_printf",
+          "dyld_stub_binder"
+        ],
+        "symhash": "e4cce50a95ec8387770df669df413dd2"
+      }
+    ]
+  }
+}

@@ -8,6 +8,7 @@ import (
 	"io"
 	"unicode/utf8"
 
+	"github.com/andrewstucki/fingerprint/macho"
 	"github.com/andrewstucki/fingerprint/pe"
 	"github.com/h2non/filetype"
 )
@@ -18,13 +19,14 @@ const headerSize = 8192
 
 // Info contains fingerprinting information.
 type Info struct {
-	MIME   string   `json:"mime"`
-	SSDEEP string   `json:"ssdeep,omitempty"`
-	MD5    string   `json:"md5"`
-	SHA1   string   `json:"sha1"`
-	SHA256 string   `json:"sha256"`
-	Size   int      `json:"size"`
-	PE     *pe.Info `json:"pe,omitempty"`
+	MIME   string      `json:"mime"`
+	SSDEEP string      `json:"ssdeep,omitempty"`
+	MD5    string      `json:"md5"`
+	SHA1   string      `json:"sha1"`
+	SHA256 string      `json:"sha256"`
+	Size   int         `json:"size"`
+	PE     *pe.Info    `json:"pe,omitempty"`
+	MachO  *macho.Info `json:"macho,omitempty"`
 }
 
 // Reader is the interface that must be satisfied for parsing a stream of data.
@@ -121,6 +123,12 @@ func Parse(r Reader, size int) (*Info, error) {
 			return nil, err
 		}
 		info.PE = peInfo
+	case "application/x-mach-binary":
+		machoInfo, err := macho.Parse(r)
+		if err != nil {
+			return nil, err
+		}
+		info.MachO = machoInfo
 	}
 
 	return info, nil

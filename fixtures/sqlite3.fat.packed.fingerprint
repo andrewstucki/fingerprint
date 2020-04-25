@@ -1,0 +1,38 @@
+{
+  "mime": "application/x-mach-binary",
+  "ssdeep": "24576:EQDvGHXzs94/jGjgPPhKlCxJq88bBiHQREi9UqnRnFpgCs5:E0+3fLGuJKlSWB/XRnF6Cs",
+  "md5": "470c4b29b26fcad5de68014bef9c4db4",
+  "sha1": "2374f6ec841727f12b06ce822d77279af98b6d04",
+  "sha256": "0a65b14bd78ab42ff63b255d04f159556b8b0a7aaf27efa479ef225a8c2750d1",
+  "size": 1232912,
+  "macho": {
+    "architectures": [
+      {
+        "cpu": "x86_64",
+        "sections": [
+          {
+            "name": "upxTEXT",
+            "address": 4294968240,
+            "size": 613456,
+            "entropy": 7.89,
+            "md5": "51c804ddbae53d6968beca31db4d4e96"
+          }
+        ],
+        "packer": "upx"
+      },
+      {
+        "cpu": "x86_64",
+        "sections": [
+          {
+            "name": "upxTEXT",
+            "address": 4294968240,
+            "size": 609360,
+            "entropy": 7.89,
+            "md5": "d08d8804df740cdaa4b863b8c649acdf"
+          }
+        ],
+        "packer": "upx"
+      }
+    ]
+  }
+}
