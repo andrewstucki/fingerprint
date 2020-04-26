@@ -3,7 +3,6 @@ package elf
 import (
 	"debug/elf"
 	"io/ioutil"
-	"log"
 	"regexp"
 	"sort"
 	"strings"
@@ -191,7 +190,6 @@ func extractCallDestinations(f *elf.File) ([]string, error) {
 			if isX86(f) && instruction.Mnemonic == "call" {
 				// Consider only call to absolute addresses
 				if strings.HasPrefix(instruction.OpStr, "0x") {
-					log.Println(instruction.OpStr)
 					address := instruction.OpStr[2:]
 					if !stringMember(symbols, address) {
 						symbols = append(symbols, address)
@@ -213,7 +211,6 @@ func extractCallDestinations(f *elf.File) ([]string, error) {
 				}
 			}
 		}
-		log.Println(len(symbols))
 		return symbols, nil
 	}
 	return nil, nil
@@ -232,6 +229,8 @@ func telfhash(elfFile *elf.File) (string, error) {
 		if err != elf.ErrNoSymbols {
 			return "", err
 		}
+	}
+	if len(staticSymbols) == 0 && len(dynSymbols) == 0 {
 		// extract symbols from call sites since we're in a static binary
 		symbols, err = extractCallDestinations(elfFile)
 		if err != nil {
@@ -250,7 +249,6 @@ func telfhash(elfFile *elf.File) (string, error) {
 		}
 		sort.Strings(symbols)
 	}
-
 	tlsh := newTlsh()
 	tlsh.update([]byte(strings.Join(symbols, ",")))
 	return strings.ToLower(tlsh.hash()), nil

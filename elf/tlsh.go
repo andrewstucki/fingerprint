@@ -135,9 +135,7 @@ func median(data []int64) int64 {
 	if length%2 != 0 {
 		return data[length/2]
 	}
-	left := data[length/2-1]
-	right := data[length/2+1]
-	return (left + right) / 2
+	return data[length/2-1]
 }
 
 func (t *tlshState) findQuartile() []int64 {
@@ -193,8 +191,8 @@ func (t *tlshState) hash() string {
 	}
 
 	lValue := capturing(t.dataLen)
-	q1Ratio := int(float32(q1*100.0)/float32(q3)) & 0xF
-	q2Ratio := int(float32(q2*100.0)/float32(q3)) & 0xF
+	q1Ratio := int(float64(q1*100.0)/float64(q3)) & 0xF
+	q2Ratio := int(float64(q2*100.0)/float64(q3)) & 0xF
 
 	if t.checksumLength == 1 {
 		return encode([]int{t.checksum}, lValue, q1Ratio, q2Ratio, code)
