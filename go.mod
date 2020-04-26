@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/h2non/filetype v1.0.12
+	github.com/knightsc/gapstone v4.0.1+incompatible
 	github.com/stretchr/testify v1.5.1
 )
 

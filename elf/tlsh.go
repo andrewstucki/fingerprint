@@ -167,13 +167,6 @@ func (t *tlshState) findQuartile() []int64 {
 	}
 }
 
-// /**
-//  * Standard constructor for computing TLSH with 128 buckets and 1 byte checksum
-//  */
-// public TlshCreator() {
-// 	this(BucketOption.BUCKETS_128, ChecksumOption.CHECKSUM_1B);
-// }
-
 func (t *tlshState) hash() string {
 	if t.dataLen == 0 {
 		return ""
