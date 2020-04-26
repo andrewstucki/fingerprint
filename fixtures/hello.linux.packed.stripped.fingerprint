@@ -1,0 +1,26 @@
+{
+  "mime": "application/x-executable",
+  "ssdeep": "12288:hmCp2nCRmAz2msAS22+SNq4KwK5ywFWKD0tOkrHBPWoQ9:h8nCRmAzDp4a5fFpD04krJWb",
+  "md5": "97dfb11935161f1bcafbea3c89f77cff",
+  "sha1": "ecaf0c94269ae0ab8f96860e5060fe3bc23e38c4",
+  "sha256": "acf2cc1becaae7b4ef68afc6fee9ac362989f55da1f6bff988b56f1a4212640f",
+  "size": 565356,
+  "elf": {
+    "machine": "Advanced Micro Devices x86-64",
+    "segments": [
+      {
+        "name": "LOAD",
+        "sections": []
+      },
+      {
+        "name": "LOAD",
+        "sections": []
+      },
+      {
+        "name": "GNU_STACK",
+        "sections": []
+      }
+    ],
+    "packer": "upx"
+  }
+}

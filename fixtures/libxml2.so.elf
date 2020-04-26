@@ -1,0 +1,493 @@
+{
+  "machine": "Intel i386",
+  "segments": [
+    {
+      "name": "LOAD",
+      "sections": [
+        ".note.gnu.build-id",
+        ".gnu.hash",
+        ".dynsym",
+        ".dynstr",
+        ".gnu.version",
+        ".gnu.version_d",
+        ".gnu.version_r",
+        ".rel.dyn",
+        ".rel.plt",
+        ".init",
+        ".plt",
+        ".plt.sec",
+        ".text",
+        ".fini",
+        ".rodata",
+        ".eh_frame_hdr",
+        ".eh_frame",
+        ".note.gnu.property"
+      ]
+    },
+    {
+      "name": "LOAD",
+      "sections": [
+        ".init_array",
+        ".fini_array",
+        ".data.rel.ro",
+        ".dynamic",
+        ".got",
+        ".data",
+        ".bss",
+        ".gnu.build.attributes",
+        ".gnu_debuglink",
+        ".gnu_debugdata"
+      ]
+    },
+    {
+      "name": "DYNAMIC",
+      "sections": [
+        ".dynamic"
+      ]
+    },
+    {
+      "name": "NOTE",
+      "sections": [
+        ".note.gnu.build-id"
+      ]
+    },
+    {
+      "name": "NOTE",
+      "sections": [
+        ".note.gnu.property"
+      ]
+    },
+    {
+      "name": "GNU_EH_FRAME",
+      "sections": [
+        ".eh_frame_hdr"
+      ]
+    },
+    {
+      "name": "GNU_STACK",
+      "sections": []
+    },
+    {
+      "name": "GNU_RELRO",
+      "sections": [
+        ".init_array",
+        ".fini_array",
+        ".data.rel.ro",
+        ".dynamic",
+        ".got"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "name": ".note.gnu.build-id",
+      "type": "NOTE",
+      "address": 308,
+      "size": 36,
+      "offset": 308,
+      "entropy": 4.19,
+      "flags": "ALLOC",
+      "md5": "4cc65d4abcb3a4935f24cad8264de6d9"
+    },
+    {
+      "name": ".gnu.hash",
+      "type": "GNU_HASH",
+      "address": 344,
+      "size": 13404,
+      "offset": 344,
+      "entropy": 6.79,
+      "flags": "ALLOC",
+      "md5": "b39d64c028568c0573dd72b06821654f"
+    },
+    {
+      "name": ".dynsym",
+      "type": "DYNSYM",
+      "address": 13748,
+      "size": 30864,
+      "offset": 13748,
+      "entropy": 4.2,
+      "flags": "ALLOC",
+      "md5": "5f756196d5296a74df1ba19183594e54"
+    },
+    {
+      "name": ".dynstr",
+      "type": "STRTAB",
+      "address": 44612,
+      "size": 37220,
+      "offset": 44612,
+      "entropy": 4.96,
+      "flags": "ALLOC",
+      "md5": "3655a987e1475794a236eb084b23e214"
+    },
+    {
+      "name": ".gnu.version",
+      "type": "GNU_VERSYM",
+      "address": 81832,
+      "size": 3858,
+      "offset": 81832,
+      "entropy": 2.4,
+      "flags": "ALLOC",
+      "md5": "da0e54da830e04e5e8d1b1ff1406e5d1"
+    },
+    {
+      "name": ".gnu.version_d",
+      "type": "GNU_VERDEF",
+      "address": 85692,
+      "size": 1496,
+      "offset": 85692,
+      "entropy": 3.01,
+      "flags": "ALLOC",
+      "md5": "169975af3363300ee74c6ccbf7462f06"
+    },
+    {
+      "name": ".gnu.version_r",
+      "type": "GNU_VERNEED",
+      "address": 87188,
+      "size": 352,
+      "offset": 87188,
+      "entropy": 3.29,
+      "flags": "ALLOC",
+      "md5": "8729d6a47403e235db3c3ad7e038c5e2"
+    },
+    {
+      "name": ".rel.dyn",
+      "type": "REL",
+      "address": 87540,
+      "size": 26344,
+      "offset": 87540,
+      "entropy": 3.55,
+      "flags": "ALLOC",
+      "md5": "5fc923b089317a28dfff03eaaf7bb9d3"
+    },
+    {
+      "name": ".rel.plt",
+      "type": "REL",
+      "address": 113884,
+      "size": 1632,
+      "offset": 113884,
+      "entropy": 4.43,
+      "flags": "ALLOC | INFO_LINK",
+      "md5": "900350fbd1680f1dab385289e7a094d8"
+    },
+    {
+      "name": ".init",
+      "type": "PROGBITS",
+      "address": 115516,
+      "size": 36,
+      "offset": 115516,
+      "entropy": 4.6,
+      "flags": "ALLOC | EXECINSTR",
+      "md5": "5350e48d5df9f3c81c5dd297e5ac3052"
+    },
+    {
+      "name": ".plt",
+      "type": "PROGBITS",
+      "address": 115552,
+      "size": 3280,
+      "offset": 115552,
+      "entropy": 4.54,
+      "flags": "ALLOC | EXECINSTR",
+      "md5": "2e6ac0bd6221f9eeca337bf62be912ad"
+    },
+    {
+      "name": ".plt.sec",
+      "type": "PROGBITS",
+      "address": 118832,
+      "size": 3264,
+      "offset": 118832,
+      "entropy": 3.75,
+      "flags": "ALLOC | EXECINSTR",
+      "md5": "6b287f5e1c7d2dbb6146b1123c85ce02"
+    },
+    {
+      "name": ".text",
+      "type": "PROGBITS",
+      "address": 122096,
+      "size": 955592,
+      "offset": 122096,
+      "entropy": 6.34,
+      "flags": "ALLOC | EXECINSTR",
+      "md5": "632d345ab77df2f401677b5f6ccb549a"
+    },
+    {
+      "name": ".fini",
+      "type": "PROGBITS",
+      "address": 1077688,
+      "size": 24,
+      "offset": 1077688,
+      "entropy": 4.25,
+      "flags": "ALLOC | EXECINSTR",
+      "md5": "e117f67930b550ccd603b01bd6e14117"
+    },
+    {
+      "name": ".rodata",
+      "type": "PROGBITS",
+      "address": 1077728,
+      "size": 130272,
+      "offset": 1077728,
+      "entropy": 5.86,
+      "flags": "ALLOC",
+      "md5": "1d7d51592cc84ecb27160304399c204d"
+    },
+    {
+      "name": ".eh_frame_hdr",
+      "type": "PROGBITS",
+      "address": 1208000,
+      "size": 21252,
+      "offset": 1208000,
+      "entropy": 6.21,
+      "flags": "ALLOC",
+      "md5": "a6de1b4bf7f3b0264b63a253f8f9c461"
+    },
+    {
+      "name": ".eh_frame",
+      "type": "PROGBITS",
+      "address": 1229252,
+      "size": 327112,
+      "offset": 1229252,
+      "entropy": 5.34,
+      "flags": "ALLOC",
+      "md5": "91e7f4571e658247e3398d495cecaec1"
+    },
+    {
+      "name": ".note.gnu.property",
+      "type": "NOTE",
+      "address": 1556364,
+      "size": 28,
+      "offset": 1556364,
+      "entropy": 2.06,
+      "flags": "ALLOC",
+      "md5": "9ab46ba29f669fd1aabf269aceda7129"
+    },
+    {
+      "name": ".init_array",
+      "type": "INIT_ARRAY",
+      "address": 1563384,
+      "size": 4,
+      "offset": 1559288,
+      "entropy": 2,
+      "flags": "WRITE | ALLOC",
+      "md5": "89d10709e86791fe2aaf0d5a937ee24b"
+    },
+    {
+      "name": ".fini_array",
+      "type": "FINI_ARRAY",
+      "address": 1563388,
+      "size": 4,
+      "offset": 1559292,
+      "entropy": 2,
+      "flags": "WRITE | ALLOC",
+      "md5": "cfb2296eb626c8482aa0b048010942bb"
+    },
+    {
+      "name": ".data.rel.ro",
+      "type": "PROGBITS",
+      "address": 1563392,
+      "size": 16200,
+      "offset": 1559296,
+      "entropy": 4.55,
+      "flags": "WRITE | ALLOC",
+      "md5": "a7d18ec26a48f29a5220a5ca6a953eeb"
+    },
+    {
+      "name": ".dynamic",
+      "type": "DYNAMIC",
+      "address": 1579592,
+      "size": 296,
+      "offset": 1575496,
+      "entropy": 3.14,
+      "flags": "WRITE | ALLOC",
+      "md5": "f54862e8f0fb699e2c2bd64adbac0f9e"
+    },
+    {
+      "name": ".got",
+      "type": "PROGBITS",
+      "address": 1579888,
+      "size": 1152,
+      "offset": 1575792,
+      "entropy": 3.15,
+      "flags": "WRITE | ALLOC",
+      "md5": "cd4e251d2ed4017861ab4e70c695c278"
+    },
+    {
+      "name": ".data",
+      "type": "PROGBITS",
+      "address": 1581056,
+      "size": 1784,
+      "offset": 1576960,
+      "entropy": 3.42,
+      "flags": "WRITE | ALLOC",
+      "md5": "c1ea9add050bdf788846adafc446d7f2"
+    },
+    {
+      "name": ".bss",
+      "type": "NOBITS",
+      "address": 1582848,
+      "size": 3796,
+      "offset": 1578744,
+      "entropy": 7.62,
+      "flags": "WRITE | ALLOC",
+      "md5": "acfbb8a24167321223dc0fb8e1aebf56"
+    },
+    {
+      "name": ".gnu.build.attributes",
+      "type": "NOTE",
+      "address": 1586644,
+      "size": 684,
+      "offset": 1578744,
+      "entropy": 3.84,
+      "flags": "-",
+      "md5": "bdfccada9b1e41caeb1639b1e3754806"
+    },
+    {
+      "name": ".gnu_debuglink",
+      "type": "PROGBITS",
+      "address": 0,
+      "size": 44,
+      "offset": 1579428,
+      "entropy": 4.21,
+      "flags": "-",
+      "md5": "98b8d575b3f763f6f4a99c20f09e6bf7"
+    },
+    {
+      "name": ".gnu_debugdata",
+      "type": "PROGBITS",
+      "address": 0,
+      "size": 34936,
+      "offset": 1579472,
+      "entropy": 7.99,
+      "flags": "-",
+      "md5": "87185f593d9ba65f16e7363dc8ed961e"
+    },
+    {
+      "name": ".shstrtab",
+      "type": "STRTAB",
+      "address": 0,
+      "size": 309,
+      "offset": 1614408,
+      "entropy": 4.24,
+      "flags": "-",
+      "md5": "e428b86fa7f6fb50556c14fce61c43c0"
+    }
+  ],
+  "imports": {
+    "libc.so.6": [
+      "fileno",
+      "fputs",
+      "__errno_location",
+      "inet_ntop",
+      "__stpcpy_chk",
+      "connect",
+      "strerror",
+      "getsockname",
+      "memcmp",
+      "freeaddrinfo",
+      "open64",
+      "__fprintf_chk",
+      "realloc",
+      "iconv_open",
+      "__isoc99_sscanf",
+      "__xstat64",
+      "strchr",
+      "recv",
+      "getenv",
+      "calloc",
+      "strncpy",
+      "write",
+      "listen",
+      "memset",
+      "fopen64",
+      "__memcpy_chk",
+      "stpcpy",
+      "__vsnprintf_chk",
+      "read",
+      "__strcat_chk",
+      "strtol",
+      "__ctype_toupper_loc",
+      "free",
+      "fflush",
+      "__vfprintf_chk",
+      "socket",
+      "getaddrinfo",
+      "fclose",
+      "dup",
+      "stderr",
+      "memcpy",
+      "strlen",
+      "iconv",
+      "rand_r",
+      "__h_errno_location",
+      "strcpy",
+      "bind",
+      "fcntl64",
+      "select",
+      "close",
+      "fwrite",
+      "fprintf",
+      "time",
+      "malloc",
+      "__stack_chk_fail",
+      "iconv_close",
+      "fputc",
+      "stdin",
+      "poll",
+      "memmove",
+      "strcat",
+      "send",
+      "getcwd",
+      "stdout",
+      "puts",
+      "__sprintf_chk",
+      "memchr",
+      "strncmp",
+      "__snprintf_chk",
+      "fread",
+      "getsockopt",
+      "snprintf",
+      "__memmove_chk",
+      "gethostbyname",
+      "ferror",
+      "lseek64",
+      "strcmp",
+      "exit",
+      "__fdelt_chk"
+    ],
+    "libdl.so.2": [
+      "dlclose",
+      "dlsym",
+      "dlopen",
+      "dlerror"
+    ],
+    "liblzma.so.5": [
+      "lzma_properties_decode",
+      "lzma_code",
+      "lzma_auto_decoder",
+      "lzma_end"
+    ],
+    "libm.so.6": [
+      "fmod",
+      "pow",
+      "floor",
+      "log10"
+    ],
+    "libz.so.1": [
+      "gzdirect",
+      "gzopen64"
+    ],
+    "unknown": [
+      "inflateReset",
+      "inflateEnd",
+      "gzclose",
+      "deflate",
+      "inflateInit2_",
+      "inflate",
+      "gzwrite",
+      "crc32",
+      "deflateEnd",
+      "gzdopen",
+      "deflateInit2_",
+      "gzread"
+    ]
+  },
+  "telfhash": "2ef2a6adbd100b512f6209f6a8cf0c8c978190b375f1efa3e6c5c44a0a6e54ca57691f"
+}

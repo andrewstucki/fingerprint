@@ -18,7 +18,7 @@ type Section struct {
 	Address uint64  `json:"address"`
 	Size    uint64  `json:"size"`
 	Offset  uint64  `json:"offset"`
-	Entropy float64 `json:"entropy,omitempty"`
+	Entropy float64 `json:"entropy"`
 	Flags   string  `json:"flags"`
 	MD5     string  `json:"md5,omitempty"`
 }
@@ -46,10 +46,14 @@ func Parse(r io.ReaderAt) (*Info, error) {
 	if err != nil {
 		return nil, err
 	}
+	telfhash, err := telfhash(elfFile)
+	if err != nil {
+		return nil, err
+	}
 	groupedSymbols := make(map[string][]string)
 	importSymbols, err := elfFile.ImportedSymbols()
 	if err != nil {
-		if err.Error() != "no symbol section" {
+		if err != elf.ErrNoSymbols {
 			return nil, err
 		}
 	}
@@ -116,6 +120,7 @@ func Parse(r io.ReaderAt) (*Info, error) {
 		Segments: translatedSegments,
 		Imports:  groupedSymbols,
 		Packer:   getPacker(elfFile),
+		Telfhash: telfhash,
 	}, nil
 }
 

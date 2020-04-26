@@ -14,7 +14,7 @@ type Section struct {
 	Name    string  `json:"name"`
 	Address uint64  `json:"address"`
 	Size    uint64  `json:"size"`
-	Entropy float64 `json:"entropy,omitempty"`
+	Entropy float64 `json:"entropy"`
 	MD5     string  `json:"md5,omitempty"`
 }
 

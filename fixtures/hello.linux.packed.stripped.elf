@@ -1,0 +1,18 @@
+{
+  "machine": "Advanced Micro Devices x86-64",
+  "segments": [
+    {
+      "name": "LOAD",
+      "sections": []
+    },
+    {
+      "name": "LOAD",
+      "sections": []
+    },
+    {
+      "name": "GNU_STACK",
+      "sections": []
+    }
+  ],
+  "packer": "upx"
+}

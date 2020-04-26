@@ -11,7 +11,9 @@ import (
 
 func TestBinaries(t *testing.T) {
 	binaries := []string{
+		"main",
 		"main.fat",
+		"sqlite3.fat.packed",
 	}
 	for _, binary := range binaries {
 		t.Run(binary, func(t *testing.T) {

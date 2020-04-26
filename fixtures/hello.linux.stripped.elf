@@ -1,0 +1,181 @@
+{
+  "machine": "Advanced Micro Devices x86-64",
+  "segments": [
+    {
+      "name": "PHDR",
+      "sections": []
+    },
+    {
+      "name": "NOTE",
+      "sections": [
+        ".note.go.buildid"
+      ]
+    },
+    {
+      "name": "LOAD",
+      "sections": [
+        ".text",
+        ".note.go.buildid"
+      ]
+    },
+    {
+      "name": "LOAD",
+      "sections": [
+        ".rodata",
+        ".typelink",
+        ".itablink",
+        ".gosymtab",
+        ".gopclntab"
+      ]
+    },
+    {
+      "name": "LOAD",
+      "sections": [
+        ".go.buildinfo",
+        ".noptrdata",
+        ".data",
+        ".bss",
+        ".noptrbss",
+        ".shstrtab"
+      ]
+    },
+    {
+      "name": "GNU_STACK",
+      "sections": []
+    },
+    {
+      "name": "UNKNOWN",
+      "sections": []
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "type": "PROGBITS",
+      "address": 4198400,
+      "size": 591289,
+      "offset": 4096,
+      "entropy": 5.95,
+      "flags": "ALLOC | EXECINSTR",
+      "md5": "76055c015b5ad80fb013413161c74b22"
+    },
+    {
+      "name": ".rodata",
+      "type": "PROGBITS",
+      "address": 4792320,
+      "size": 307978,
+      "offset": 598016,
+      "entropy": 4.25,
+      "flags": "ALLOC",
+      "md5": "4a58b60686e14a3d09b9fa4d6afdd887"
+    },
+    {
+      "name": ".typelink",
+      "type": "PROGBITS",
+      "address": 5100512,
+      "size": 2716,
+      "offset": 906208,
+      "entropy": 4.35,
+      "flags": "ALLOC",
+      "md5": "affc3fbb46aae38f9972074ab550ef5f"
+    },
+    {
+      "name": ".itablink",
+      "type": "PROGBITS",
+      "address": 5103232,
+      "size": 80,
+      "offset": 908928,
+      "entropy": 2.01,
+      "flags": "ALLOC",
+      "md5": "9f76863ef1b0ec20821b80f399954245"
+    },
+    {
+      "name": ".gosymtab",
+      "type": "PROGBITS",
+      "address": 5103312,
+      "size": 0,
+      "offset": 909008,
+      "entropy": 0,
+      "flags": "ALLOC",
+      "md5": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+      "name": ".gopclntab",
+      "type": "PROGBITS",
+      "address": 5103328,
+      "size": 461210,
+      "offset": 909024,
+      "entropy": 5.6,
+      "flags": "ALLOC",
+      "md5": "9e76ee6caf69e400e9fc59f82a5c5929"
+    },
+    {
+      "name": ".go.buildinfo",
+      "type": "PROGBITS",
+      "address": 5566464,
+      "size": 32,
+      "offset": 1372160,
+      "entropy": 3.62,
+      "flags": "WRITE | ALLOC",
+      "md5": "119d6bd52103acaa6d4d2985fcd71c1f"
+    },
+    {
+      "name": ".noptrdata",
+      "type": "PROGBITS",
+      "address": 5566496,
+      "size": 57504,
+      "offset": 1372192,
+      "entropy": 5.01,
+      "flags": "WRITE | ALLOC",
+      "md5": "61f2addcbfc7ff6f1a7a8f9031ab9d03"
+    },
+    {
+      "name": ".data",
+      "type": "PROGBITS",
+      "address": 5624000,
+      "size": 28944,
+      "offset": 1429696,
+      "entropy": 1.52,
+      "flags": "WRITE | ALLOC",
+      "md5": "7a1ca3186c6c8f307c5185d3f8fe77f3"
+    },
+    {
+      "name": ".bss",
+      "type": "NOBITS",
+      "address": 5652960,
+      "size": 170384,
+      "offset": 1458640,
+      "entropy": 0,
+      "flags": "WRITE | ALLOC"
+    },
+    {
+      "name": ".noptrbss",
+      "type": "NOBITS",
+      "address": 5823360,
+      "size": 10312,
+      "offset": 1458640,
+      "entropy": 0,
+      "flags": "WRITE | ALLOC"
+    },
+    {
+      "name": ".note.go.buildid",
+      "type": "NOTE",
+      "address": 4198300,
+      "size": 100,
+      "offset": 3996,
+      "entropy": 5.33,
+      "flags": "ALLOC",
+      "md5": "6f25cd73136d79e9e0cd8848b94b1801"
+    },
+    {
+      "name": ".shstrtab",
+      "type": "STRTAB",
+      "address": 0,
+      "size": 129,
+      "offset": 1458640,
+      "entropy": 4.09,
+      "flags": "-",
+      "md5": "1115c70dcea0cda5af1fcff9fb927c93"
+    }
+  ]
+}
