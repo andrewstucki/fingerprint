@@ -25,7 +25,7 @@ var (
 		"cacheflush",        // MIPS default
 		"puts",              // Compiler optimization (function replacement)
 		"atol",              // Compiler optimization (function replacement)
-		"malloc_trim",       //GNU extensions
+		"malloc_trim",       // GNU extensions
 	}
 )
 
@@ -75,35 +75,6 @@ func isX86(f *elf.File) bool {
 	return (f.Class == elf.ELFCLASS64 && f.Machine == elf.EM_X86_64) || (f.Class == elf.ELFCLASS32 && f.Machine == elf.EM_386)
 }
 
-// def get_ep_section_or_segment(elf):
-//     """Get the code section/segment where the entry point is located
-//     """
-//
-//     # get the entry point
-//     ep = elf.header.e_entry
-//
-//     # enumerate all the sections. the code section is where the entry point
-//     # falls in between the start and end address of the section
-//     for section in elf.iter_sections():
-//         start_offset = section.header.sh_addr
-//         end_offset = start_offset + section.header.sh_size - 1
-//
-//         if (ep >= start_offset) and (ep <= end_offset):
-//             return section
-//
-//     # if we reached this point, then we failed to get the code section using
-//     # the above method. we use the default '.text' section
-//     code_section_or_segment =  elf.get_section_by_name('.text')
-//
-//     if code_section_or_segment:
-//         return code_section_or_segment
-//
-//     for segment in elf.iter_segments():
-//         if segment['p_type'] == "PT_LOAD" and segment['p_flags'] == 5: # r-x segment
-//             return segment
-//
-// 		return code_section_or_segment
-
 func stringMember(ary []string, test string) bool {
 	for _, a := range ary {
 		if a == test {
@@ -112,15 +83,6 @@ func stringMember(ary []string, test string) bool {
 	}
 	return false
 }
-
-// def elf_get_imagebase(elf):
-//     i=0
-//     while elf.iter_segments():
-//         if (elf._get_segment_header(i)['p_type'] == 'PT_LOAD'):
-//             return elf._get_segment_header(i)['p_vaddr']
-//         i+=1
-
-// 		return 0
 
 func getImageBase(f *elf.File) uint64 {
 	for _, segment := range f.Progs {
