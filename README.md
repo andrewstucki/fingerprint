@@ -12,5 +12,5 @@ Additionally it has implementations of telfhash (Elf), imphash (PE), and
 symhash (Mach-o) fuzzy symbol hashing algorithms that are fairly useful
 in malware analysis.
 
-The only dependency required is the capstone library (used for enumerating
+The only dependency required is the [capstone library](https://github.com/aquynh/capstone) (used for enumerating
 call sites through disassembling stripped elf binaries for telfhash calculations).
