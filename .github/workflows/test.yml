@@ -16,6 +16,6 @@ jobs:
           path: /go/pkg/mod
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
       - name: Install C Toolchain and Dependencies
-        run: apk add git build-base capstone-dev
+        run: apk add build-base capstone-dev
       - name: Run unit tests
         run: go test ./...
