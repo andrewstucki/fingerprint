@@ -106,7 +106,7 @@ func Parse(r io.ReaderAt) (*Info, error) {
 	var compiledAt *time.Time
 	timestamp := int64(peFile.FileHeader.TimeDateStamp)
 	if timestamp != 0 {
-		compiled := time.Unix(timestamp, 0)
+		compiled := time.Unix(timestamp, 0).UTC()
 		compiledAt = &compiled
 	}
 
