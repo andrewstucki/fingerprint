@@ -19,6 +19,6 @@ jobs:
           path: ~/go/pkg/mod
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
       - name: Install Capstone
-        run: sudo apt-get install capstone
+        run: sudo apt-get install libcapstone-dev
       - name: Run unit tests
         run: go test ./...
