@@ -1,5 +1,7 @@
 # Fingerprint
 
+![build status](https://github.com/andrewstucki/fingerprint/workflows/Test/badge.svg)
+
 This repo serves as an experimental library for fingerprinting various
 files similar to how VirusTotal does.
 
