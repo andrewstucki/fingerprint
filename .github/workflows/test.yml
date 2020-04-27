@@ -20,6 +20,6 @@ jobs:
           path: ~/go/pkg/mod
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
       - name: Install Capstone
-        run: apt-get install build-essential libcapstone-dev
+        run: apt-get update && apt-get install build-essential libcapstone-dev
       - name: Run unit tests
         run: go test ./...
