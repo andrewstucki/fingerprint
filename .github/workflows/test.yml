@@ -14,7 +14,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: /go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/go.sum') }}
       - name: Install C Toolchain and Dependencies
         run: apk add build-base capstone-dev
       - name: Run unit tests
