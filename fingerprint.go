@@ -3,10 +3,11 @@ package fingerprint
 import (
 	"crypto/md5"
 	"crypto/sha1"
-	"crypto/sha256"
 	"encoding/hex"
 	"io"
 	"unicode/utf8"
+
+	sha256 "github.com/minio/sha256-simd"
 
 	"github.com/andrewstucki/fingerprint/elf"
 	"github.com/andrewstucki/fingerprint/macho"
@@ -121,22 +122,19 @@ func Parse(r Reader, size int) (*Info, error) {
 	switch mime {
 	case "application/vnd.microsoft.portable-executable":
 		peInfo, err := pe.Parse(r)
-		if err != nil {
-			return nil, err
+		if err == nil {
+			info.PE = peInfo
 		}
-		info.PE = peInfo
 	case "application/x-mach-binary":
 		machoInfo, err := macho.Parse(r)
-		if err != nil {
-			return nil, err
+		if err == nil {
+			info.MachO = machoInfo
 		}
-		info.MachO = machoInfo
 	case "application/x-executable":
 		elfInfo, err := elf.Parse(r)
-		if err != nil {
-			return nil, err
+		if err == nil {
+			info.Elf = elfInfo
 		}
-		info.Elf = elfInfo
 	}
 
 	return info, nil

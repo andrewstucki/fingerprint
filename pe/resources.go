@@ -1,13 +1,13 @@
 package pe
 
 import (
-	"crypto/sha256"
 	"encoding/binary"
 	"encoding/hex"
-	"errors"
 	"strconv"
 
+	"github.com/go-errors/errors"
 	"github.com/h2non/filetype"
+	sha256 "github.com/minio/sha256-simd"
 )
 
 const (
@@ -91,8 +91,13 @@ func followOffset(global []byte, value uint32, requiredSize int) ([]byte, error)
 // sanity checking things like the number of entries matching what's specified
 // instead we just make sure to bounds check what we're reading and int the
 // case of potential over-read, return an error
-func parseDirectory(virtualAddress uint32, data []byte) ([]Resource, error) {
-	return parseEntries(virtualAddress, "", data, data)
+func parseDirectory(virtualAddress uint32, data []byte) []Resource {
+	entries, err := parseEntries(virtualAddress, "", data, data)
+	if err != nil {
+		// swallow the error and move on
+		return nil
+	}
+	return entries
 }
 
 func parseName(global, base []byte) (string, error) {
@@ -111,13 +116,16 @@ func parseName(global, base []byte) (string, error) {
 	return idName(id), nil
 }
 
+// we swallow errors from followOffset so we
+// parse all entries we can and just ignore
+// the invalid ones
 func parseEntry(virtualAddress uint32, root string, global, base []byte) ([]Resource, error) {
 	offset := binary.LittleEndian.Uint32(base[4:8])
 	if isRVA(offset) {
 		// we have a nested directory
 		next, err := followOffset(global, offset, 0)
 		if err != nil {
-			return nil, err
+			return nil, nil
 		}
 		return parseEntries(virtualAddress, root, global, next)
 	}
@@ -125,7 +133,7 @@ func parseEntry(virtualAddress uint32, root string, global, base []byte) ([]Reso
 	language := uint16(binary.LittleEndian.Uint32(base[0:4]))
 	entry, err := followOffset(global, offset, 8)
 	if err != nil {
-		return nil, err
+		return nil, nil
 	}
 	entryOffset := binary.LittleEndian.Uint32(entry[0:4])
 	entrySize := int(binary.LittleEndian.Uint32(entry[4:8]))
@@ -140,7 +148,10 @@ func parseEntry(virtualAddress uint32, root string, global, base []byte) ([]Reso
 
 	data, err := followOffset(global, entryOffset-virtualAddress, entrySize)
 	if err != nil {
-		return nil, err
+		// we have an invalid data reference, so just return what we can
+		return []Resource{
+			Resource{Type: root, Language: languageName(language), Size: entrySize},
+		}, nil
 	}
 	resourceData := data[0:entrySize]
 	hash := sha256.Sum256(resourceData)
@@ -168,7 +179,8 @@ func parseEntries(virtualAddress uint32, root string, global, base []byte) ([]Re
 	numEntries := int(namedEntries + idEntries)
 	entriesData := base[16:]
 	if len(entriesData) < numEntries*8 {
-		return nil, errors.New("invalid data")
+		// invalid directory
+		return nil, nil
 	}
 
 	for i := 0; i < numEntries; i++ {
@@ -179,13 +191,15 @@ func parseEntries(virtualAddress uint32, root string, global, base []byte) ([]Re
 			var err error
 			leafRoot, err = parseName(global, entryData)
 			if err != nil {
-				return nil, err
+				// invalid name, still attempt to parse
+				leafRoot = "UNKNOWN"
 			}
 		}
 
 		entryResources, err := parseEntry(virtualAddress, leafRoot, global, entryData)
 		if err != nil {
-			return nil, err
+			// if we threw an error, just swallow it to keep trying to parse
+			return nil, nil
 		}
 		resources = append(resources, entryResources...)
 	}

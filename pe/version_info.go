@@ -22,6 +22,11 @@ func readStrings(data []byte) []VersionInfo {
 			offset += 2
 			continue
 		}
+		if len(stringData) < 6 {
+			// we have junk string, just try and read past the offset
+			offset += int(stringSize)
+			continue
+		}
 		valueType := binary.LittleEndian.Uint16(stringData[4:6])
 		if valueType == 1 {
 			key := readUnicode(stringData[6:])
@@ -58,7 +63,13 @@ func readStringTables(data []byte) []VersionInfo {
 		szKeyLength := 8 * 2
 		childOffset := szKeyLength + 6
 		paddedOffset := childOffset + (childOffset % 4)
-		children := tableData[paddedOffset : int(tableSize)-paddedOffset]
+		childEnd := int(tableSize) - paddedOffset
+		if childEnd < paddedOffset || len(tableData) < paddedOffset+1 || len(tableData) < int(tableSize)-paddedOffset {
+			// we have an invalid string
+			offset += int(tableSize)
+			continue
+		}
+		children := tableData[paddedOffset:childEnd]
 
 		childStrings = append(childStrings, readStrings(children)...)
 		offset += int(tableSize)
@@ -67,6 +78,9 @@ func readStringTables(data []byte) []VersionInfo {
 
 func readStringFileInfo(data []byte) []VersionInfo {
 	szKeyLength := len(stringFileInfo)
+	if len(data) < szKeyLength {
+		return nil
+	}
 	for i := 0; i < len(data)-szKeyLength; i++ {
 		szKey := data[i : i+szKeyLength]
 		if bytes.Compare(szKey, stringFileInfo) == 0 {
@@ -76,11 +90,11 @@ func readStringFileInfo(data []byte) []VersionInfo {
 	return nil
 }
 
-func getVersionInfoForResources(resources []Resource) ([]VersionInfo, error) {
+func getVersionInfoForResources(resources []Resource) []VersionInfo {
 	for _, resource := range resources {
 		if resource.Type == "RT_VERSION" {
-			return readStringFileInfo(resource.data), nil
+			return readStringFileInfo(resource.data)
 		}
 	}
-	return nil, nil
+	return nil
 }

@@ -9,8 +9,6 @@ import (
 	"strings"
 )
 
-const emptyHash = "d41d8cd98f00b204e9800998ecf8427e"
-
 func readString(section []byte, start int) string {
 	if start < 0 || start >= len(section) {
 		return ""
@@ -97,27 +95,31 @@ func normalizeLibraryName(name string) string {
 	return name
 }
 
-func exports(f *pe.File) ([]string, error) {
+func exports(f *pe.File) []string {
 	if f.OptionalHeader == nil {
-		return nil, nil
+		return nil
 	}
 	data, exportAddress, sectionAddress, err := exportData(f)
 	if err != nil {
-		return nil, err
+		// couldn't find the proper data directory, swallow the error
+		return nil
 	}
 	if data == nil {
-		return nil, nil
+		return nil
 	}
 	tableData := data[exportAddress-sectionAddress:]
 	if len(tableData) < 40 {
-		return nil, nil
+		return nil
 	}
 	exportCount := int(binary.LittleEndian.Uint32(tableData[24:30]))
 	nameOffset := binary.LittleEndian.Uint32(tableData[32:36])
+	if len(data) < int(nameOffset-sectionAddress)+1 {
+		return nil
+	}
 	nameRVATable := data[nameOffset-sectionAddress:]
 	// The pointers are 32 bits each and are relative to the image base
 	if len(nameRVATable) < 4*exportCount {
-		return nil, nil
+		return nil
 	}
 
 	functions := make([]string, exportCount)
@@ -127,21 +129,22 @@ func exports(f *pe.File) ([]string, error) {
 		functions[offset] = readString(data, int(symbolOffset-sectionAddress))
 	}
 
-	return functions, nil
+	return functions
 }
 
-func imphash(f *pe.File) (map[string][]string, string, error) {
+func imphash(f *pe.File) (map[string][]string, string) {
 	if f.OptionalHeader == nil {
-		return nil, emptyHash, nil
+		return nil, ""
 	}
 
 	pe64 := f.Machine == pe.IMAGE_FILE_MACHINE_AMD64
 	data, importAddress, sectionAddress, err := importData(f)
 	if err != nil {
-		return nil, emptyHash, err
+		// swallow error
+		return nil, ""
 	}
 	if data == nil {
-		return nil, emptyHash, nil
+		return nil, ""
 	}
 
 	tableData := data[importAddress-sectionAddress:]
@@ -203,5 +206,5 @@ func imphash(f *pe.File) (map[string][]string, string, error) {
 	}
 
 	hash := md5.Sum([]byte(strings.Join(imphashEntries, ",")))
-	return symbols, hex.EncodeToString(hash[:]), nil
+	return symbols, hex.EncodeToString(hash[:])
 }

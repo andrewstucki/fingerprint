@@ -9,6 +9,7 @@ import (
 	"sync"
 
 	"github.com/andrewstucki/fingerprint"
+	"github.com/go-errors/errors"
 )
 
 const helpString = `Fingerprint a file or directory.
@@ -56,7 +57,11 @@ func main() {
 		files, err = fingerprintFile(f, fileinfo.Size())
 	}
 	if err != nil {
-		fmt.Println(err)
+		if traceErr, ok := err.(*errors.Error); ok {
+			fmt.Println(traceErr.ErrorStack())
+		} else {
+			fmt.Println(err)
+		}
 		os.Exit(1)
 	}
 	data, err := json.Marshal(files)

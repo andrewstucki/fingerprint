@@ -17,7 +17,7 @@ type Section struct {
 	VirtualSize    uint32  `json:"virtualSize"`
 	RawSize        uint32  `json:"rawSize"`
 	Entropy        float64 `json:"entropy"`
-	MD5            string  `json:"md5"`
+	MD5            string  `json:"md5,omitempty"`
 }
 
 // Header contains information found in a PE header.
@@ -92,15 +92,8 @@ func Parse(r io.ReaderAt) (*Info, error) {
 		architecture = "unknown"
 	}
 
-	exportSymbols, err := exports(peFile)
-	if err != nil {
-		return nil, err
-	}
-
-	importSymbols, imphash, err := imphash(peFile)
-	if err != nil {
-		return nil, err
-	}
+	exportSymbols := exports(peFile)
+	importSymbols, imphash := imphash(peFile)
 
 	sectionSize := len(peFile.Sections)
 	var compiledAt *time.Time
@@ -126,37 +119,28 @@ func Parse(r io.ReaderAt) (*Info, error) {
 		Packer:                       getPacker(peFile),
 	}
 	for i, section := range peFile.Sections {
+		hashed := ""
 		data, err := section.Data()
-		if err != nil {
-			return nil, err
+		if err == nil {
+			md5Hash := md5.Sum(data)
+			hashed = hex.EncodeToString(md5Hash[:])
 		}
-		hashed := md5.Sum(data)
 		info.Sections[i] = Section{
 			Name:           section.Name,
 			VirtualAddress: section.VirtualAddress,
 			VirtualSize:    section.VirtualSize,
 			RawSize:        section.Size,
 			Entropy:        internal.Entropy(data),
-			MD5:            hex.EncodeToString(hashed[:]),
+			MD5:            hashed,
 		}
 
-		if section.Name == ".rsrc" {
-			resources, err := parseDirectory(section.VirtualAddress, data)
-			if err != nil {
-				return nil, err
-			}
-
-			info.Resources = resources
-			for _, resource := range resources {
+		if section.Name == ".rsrc" && len(data) > 0 {
+			info.Resources = parseDirectory(section.VirtualAddress, data)
+			for _, resource := range info.Resources {
 				countValue(info.ContainedResourcesByType, resource.Type)
 				countValue(info.ContainedResourcesByLanguage, resource.Language)
 			}
-
-			versionInfo, err := getVersionInfoForResources(resources)
-			if err != nil {
-				return nil, err
-			}
-			info.FileVersionInfo = versionInfo
+			info.FileVersionInfo = getVersionInfoForResources(info.Resources)
 		}
 	}
 	return info, nil
