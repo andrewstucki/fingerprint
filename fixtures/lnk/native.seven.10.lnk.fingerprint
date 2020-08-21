@@ -1,0 +1,52 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "0b0cff6b343aafc175ce671f7f183e92",
+  "sha1": "13a74c76ff7237f0b00a38e46f8a5409885d0802",
+  "sha256": "34540d425d4ca6815777a379cee6b5bfed540391fa2ee300bca258e01f8465d3",
+  "size": 1230,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "ForceNoLinkInfo",
+        "HasExpString",
+        "HasIconLocation",
+        "HasName",
+        "HasRelativePath",
+        "IsUnicode",
+        "PreferEnvironmentPath"
+      ],
+      "fileFlags": [
+        "FILE_ATTRIBUTE_ARCHIVE"
+      ],
+      "creationTime": "2009-07-13T19:41:28-04:00",
+      "accessedTime": "2009-07-13T19:41:28-04:00",
+      "modifiedTime": "2009-07-13T21:14:13-04:00",
+      "fileSize": 776192,
+      "iconIndex": 0,
+      "windowStyle": "SW_NORMAL"
+    },
+    "name": "@%SystemRoot%\\system32\\shell32.dll,-22531",
+    "relativePath": "..\\..\\..\\..\\..\\..\\Windows\\System32\\calc.exe",
+    "iconLocation": "%windir%\\system32\\calc.exe",
+    "extra": {
+      "environment": {
+        "ansi": "%windir%\\system32\\calc.exe",
+        "unicode": "%windir%\\system32\\calc.exe"
+      },
+      "propertyStore": {},
+      "tracker": {
+        "version": 0,
+        "machineId": "win-dc3j5p1qj61",
+        "droid": [
+          "a6b30b54-1b3f-044f-b746-9c5af7c07867",
+          "1bc79ae2-3770-de11-816d-001c23e25b76"
+        ],
+        "droidBirth": [
+          "a6b30b54-1b3f-044f-b746-9c5af7c07867",
+          "1bc79ae2-3770-de11-816d-001c23e25b76"
+        ]
+      }
+    }
+  }
+}

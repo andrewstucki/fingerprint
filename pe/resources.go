@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"strconv"
 
+	"github.com/andrewstucki/fingerprint/internal"
 	"github.com/go-errors/errors"
 	"github.com/h2non/filetype"
 	sha256 "github.com/minio/sha256-simd"
@@ -111,7 +112,7 @@ func parseName(global, base []byte) (string, error) {
 		if len(nameData) < nameEnd {
 			return "", errors.New("invalid data")
 		}
-		return readUnicode(nameData[2:nameEnd]), nil
+		return internal.ReadUnicode(nameData[:nameEnd], 2), nil
 	}
 	return idName(id), nil
 }

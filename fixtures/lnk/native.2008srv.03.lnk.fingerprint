@@ -1,0 +1,31 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "7444513352a32c012070f652d76748f9",
+  "sha1": "4f8dcbda02f1d84d31668ea6d7492e3a90a00a7a",
+  "sha256": "07661e1af1ea85253d1e252fdb45cd783793e25a8626b306e91d481ed547381d",
+  "size": 230,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "HasIconLocation",
+        "HasName",
+        "HasTargetIDList",
+        "IsUnicode"
+      ],
+      "fileFlags": [],
+      "iconIndex": 4294967269,
+      "windowStyle": "SW_NORMAL"
+    },
+    "targets": [
+      {
+        "size": 20,
+        "typeId": 128,
+        "sha256": "fe665801103b090a9f447cb365a4acb589b5e2aed6473da23290967de2fcbbf9"
+      }
+    ],
+    "name": "@%windir%\\explorer.exe,-307",
+    "iconLocation": "%SystemRoot%\\system32\\imageres.dll",
+    "extra": {}
+  }
+}

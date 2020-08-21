@@ -1,0 +1,66 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "584d371bd0908ec14ec7ff93aa3984da",
+  "sha1": "17945a231a62b3a410f8b615d2d4d458feb4244b",
+  "sha256": "8db399fd405dd19ad9be0cb446c67a2746247ad5a06167d6bf2787e3d93a93f7",
+  "size": 605,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "HasLinkInfo",
+        "HasRelativePath",
+        "HasTargetIDList",
+        "IsUnicode"
+      ],
+      "fileFlags": [
+        "FILE_ATTRIBUTE_DIRECTORY",
+        "FILE_ATTRIBUTE_READONLY"
+      ],
+      "creationTime": "2004-08-19T21:16:19-04:00",
+      "accessedTime": "2004-08-19T08:00:00-04:00",
+      "modifiedTime": "2004-08-19T21:16:48-04:00",
+      "iconIndex": 0,
+      "windowStyle": "SW_NORMAL"
+    },
+    "targets": [
+      {
+        "size": 20,
+        "typeId": 80,
+        "sha256": "df3ab5fa5bfd571b68b5a1fdf4889a3c43a80391809dbc7e3cdf97d471b4bcee"
+      },
+      {
+        "size": 50,
+        "typeId": 0,
+        "sha256": "47cb092c959a4aa13007f154fa8992a26a9065f11ed30de3d43f12832b9ab0c5"
+      },
+      {
+        "size": 88,
+        "typeId": 0,
+        "sha256": "73a8aaeff232a15bb75df27b252781136149be3d9a8f278a3835ecba83fd4c32"
+      },
+      {
+        "size": 98,
+        "typeId": 0,
+        "sha256": "3db7f92e529c32261a025446f8d8563aca6c06b4ca84a75a0f27a4f18473b1f2"
+      }
+    ],
+    "location": {
+      "flags": [
+        "VolumeIDAndLocalBasePath"
+      ],
+      "volume": {
+        "driveType": "DRIVE_UNKNOWN",
+        "driveSerialNumber": 3090345874
+      },
+      "localBasePath": "C:\\Documents and Settings\\All Users\\Documents\\Mes images\\\ufffdchantillons d'images"
+    },
+    "relativePath": "..\\..\\..\\All Users\\Documents\\Mes images\\Échantillons d'images",
+    "extra": {
+      "specialFolder": {
+        "id": 54,
+        "offset": 158
+      }
+    }
+  }
+}

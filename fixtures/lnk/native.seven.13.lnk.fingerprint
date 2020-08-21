@@ -1,0 +1,78 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "2a2efbdd5436e16fa6a772c46b06de23",
+  "sha1": "26b842d2549e50e1733659bf34b5c5d870828b5d",
+  "sha256": "a29d37f2b7a328eeaaceb3d11e4c5faf7b78b6709aa555cf511129c7c91ec3fe",
+  "size": 489,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "EnableTargetMetadata",
+        "HasLinkInfo",
+        "HasRelativePath",
+        "HasTargetIDList",
+        "IsUnicode"
+      ],
+      "fileFlags": [
+        "FILE_ATTRIBUTE_DIRECTORY",
+        "FILE_ATTRIBUTE_READONLY"
+      ],
+      "creationTime": "2010-05-18T15:24:11-04:00",
+      "accessedTime": "2010-05-18T15:24:30-04:00",
+      "modifiedTime": "2010-05-18T15:24:30-04:00",
+      "iconIndex": 0,
+      "windowStyle": "SW_NORMAL"
+    },
+    "location": {
+      "flags": [
+        "CommonNetworkRelativeLinkAndPathSuffix",
+        "VolumeIDAndLocalBasePath"
+      ],
+      "commonPathSuffix": "Juliette\\Desktop",
+      "volume": {
+        "driveType": "DRIVE_UNKNOWN",
+        "driveSerialNumber": 1345198730,
+        "volumeLabel": "SSD-WIN7"
+      },
+      "localBasePath": "C:\\Users\\",
+      "networkShare": {
+        "flags": [
+          "ValidNetType"
+        ],
+        "name": "\\\\NETBOOK\\Users"
+      }
+    },
+    "relativePath": "..\\Desktop",
+    "extra": {
+      "propertyStore": {
+        "properties": {
+          "10": [
+            {
+              "type": "VT_LPWSTR",
+              "value": "Bureau"
+            }
+          ],
+          "30": [
+            {
+              "type": "VT_LPWSTR",
+              "value": "C:\\Users\\Juliette\\Desktop"
+            }
+          ]
+        }
+      },
+      "tracker": {
+        "version": 0,
+        "machineId": "netbook",
+        "droid": [
+          "da667c4f-20d3-c44c-8d50-165dd98ebc01",
+          "1ef183f9-b062-df11-9c95-001377d34a59"
+        ],
+        "droidBirth": [
+          "da667c4f-20d3-c44c-8d50-165dd98ebc01",
+          "1ef183f9-b062-df11-9c95-001377d34a59"
+        ]
+      }
+    }
+  }
+}

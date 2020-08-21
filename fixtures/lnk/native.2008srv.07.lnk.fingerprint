@@ -1,0 +1,31 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "711507ed6252ad598d1495a4bbfae968",
+  "sha1": "0f394ece2af8760b0053b5297ccb81c918e339a2",
+  "sha256": "3d70b0c8305b37448b77cb316e5c6ec1a7b5fb2692c654960e5548a8f9a744ea",
+  "size": 230,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "HasIconLocation",
+        "HasName",
+        "HasTargetIDList",
+        "IsUnicode"
+      ],
+      "fileFlags": [],
+      "iconIndex": 4294967272,
+      "windowStyle": "SW_NORMAL"
+    },
+    "targets": [
+      {
+        "size": 20,
+        "typeId": 128,
+        "sha256": "16d0e14f639e9764cece0da2d07db14c9bd498fa3bc66fd559ac00d26d24cc2c"
+      }
+    ],
+    "name": "@%windir%\\explorer.exe,-7001",
+    "iconLocation": "%SystemRoot%\\system32\\shell32.dll",
+    "extra": {}
+  }
+}

@@ -3,6 +3,8 @@ package pe
 import (
 	"bytes"
 	"encoding/binary"
+
+	"github.com/andrewstucki/fingerprint/internal"
 )
 
 var (
@@ -29,11 +31,11 @@ func readStrings(data []byte) []VersionInfo {
 		}
 		valueType := binary.LittleEndian.Uint16(stringData[4:6])
 		if valueType == 1 {
-			key := readUnicode(stringData[6:])
+			key := internal.ReadUnicode(stringData, 6)
 			paddingOffset := len(key)*2 + 8
 			paddedOffset := paddingOffset + (paddingOffset % 4)
 			if len(stringData) >= paddedOffset+1 {
-				value := readUnicode(stringData[paddedOffset:])
+				value := internal.ReadUnicode(stringData, paddedOffset)
 				if value != "" {
 					childStrings = append(childStrings, VersionInfo{
 						Name:  key,

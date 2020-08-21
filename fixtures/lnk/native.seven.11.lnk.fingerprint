@@ -1,0 +1,35 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "d09b1f6bbc39aadcfe4c0115ef547324",
+  "sha1": "6e2eb66d72c1e32c218d2b6c2588990c11325b12",
+  "sha256": "e0606ae07dd84bc22a066cf23a353c794fe68fa6c0f715b66417e1a93faf80aa",
+  "size": 156,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "DisableKnownFolderTracking",
+        "HasTargetIDList",
+        "IsUnicode"
+      ],
+      "fileFlags": [],
+      "iconIndex": 0,
+      "windowStyle": "SW_NORMAL"
+    },
+    "targets": [
+      {
+        "size": 20,
+        "typeId": 112,
+        "sha256": "4f2ef7c750b2e077b92d59dcecca8414e25706ebfe12e01016750e9af9574410"
+      },
+      {
+        "size": 12,
+        "typeId": 0,
+        "sha256": "5acc20e219f85705afbb40e1379eff5b9ed6ee025f9a07f583725038dd1926d2"
+      }
+    ],
+    "extra": {
+      "propertyStore": {}
+    }
+  }
+}

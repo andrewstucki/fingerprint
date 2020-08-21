@@ -1,0 +1,52 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "0e59979fadb6bf4b20599cd9f235dadc",
+  "sha1": "4e5af4428e11535e893b1e4e8b15121123af04d9",
+  "sha256": "7fa953bf2671c04c4823a9fbabc72faaf1b78af46ac0d776ce0c9ee27539ea2c",
+  "size": 1242,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "ForceNoLinkInfo",
+        "HasExpString",
+        "HasIconLocation",
+        "HasName",
+        "HasRelativePath",
+        "IsUnicode",
+        "PreferEnvironmentPath"
+      ],
+      "fileFlags": [
+        "FILE_ATTRIBUTE_ARCHIVE"
+      ],
+      "creationTime": "2009-07-13T19:43:12-04:00",
+      "accessedTime": "2009-07-13T19:43:12-04:00",
+      "modifiedTime": "2009-07-13T21:14:26-04:00",
+      "fileSize": 6376960,
+      "iconIndex": 0,
+      "windowStyle": "SW_NORMAL"
+    },
+    "name": "@%SystemRoot%\\system32\\shell32.dll,-22566",
+    "relativePath": "..\\..\\..\\..\\..\\..\\Windows\\System32\\mspaint.exe",
+    "iconLocation": "%windir%\\system32\\mspaint.exe",
+    "extra": {
+      "environment": {
+        "ansi": "%windir%\\system32\\mspaint.exe",
+        "unicode": "%windir%\\system32\\mspaint.exe"
+      },
+      "propertyStore": {},
+      "tracker": {
+        "version": 0,
+        "machineId": "win-dc3j5p1qj61",
+        "droid": [
+          "a6b30b54-1b3f-044f-b746-9c5af7c07867",
+          "10c79ae2-3770-de11-816d-001c23e25b76"
+        ],
+        "droidBirth": [
+          "a6b30b54-1b3f-044f-b746-9c5af7c07867",
+          "10c79ae2-3770-de11-816d-001c23e25b76"
+        ]
+      }
+    }
+  }
+}

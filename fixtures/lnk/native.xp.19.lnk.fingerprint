@@ -1,0 +1,36 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "dd2079d5643ed305bf83062a38f127bf",
+  "sha1": "c727183455b950f3d4814d0d00901ecd29d090f9",
+  "sha256": "28bb782b0f19e4bb1b8beb788799594f11ee3e92314bc76a68e427cf9c6fb657",
+  "size": 179,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "HasName",
+        "HasTargetIDList",
+        "HasWorkingDir",
+        "IsUnicode"
+      ],
+      "fileFlags": [],
+      "iconIndex": 0,
+      "windowStyle": "SW_NORMAL"
+    },
+    "targets": [
+      {
+        "size": 20,
+        "typeId": 80,
+        "sha256": "df3ab5fa5bfd571b68b5a1fdf4889a3c43a80391809dbc7e3cdf97d471b4bcee"
+      },
+      {
+        "size": 25,
+        "typeId": 69,
+        "sha256": "03ebea9a4d6ab5842ebe07b818f2a8b31c70a04c7704364bb874c991443e3d6e"
+      }
+    ],
+    "name": "Lecteur Drag-to-Disc",
+    "workingDirectory": "E:\\",
+    "extra": {}
+  }
+}

@@ -10,6 +10,7 @@ import (
 	sha256 "github.com/minio/sha256-simd"
 
 	"github.com/andrewstucki/fingerprint/elf"
+	"github.com/andrewstucki/fingerprint/lnk"
 	"github.com/andrewstucki/fingerprint/macho"
 	"github.com/andrewstucki/fingerprint/pe"
 	"github.com/h2non/filetype"
@@ -30,6 +31,7 @@ type Info struct {
 	PE     *pe.Info    `json:"pe,omitempty"`
 	MachO  *macho.Info `json:"macho,omitempty"`
 	Elf    *elf.Info   `json:"elf,omitempty"`
+	LNK    *lnk.Info   `json:"lnk,omitempty"`
 }
 
 // Reader is the interface that must be satisfied for parsing a stream of data.
@@ -134,6 +136,11 @@ func Parse(r Reader, size int) (*Info, error) {
 		elfInfo, err := elf.Parse(r)
 		if err == nil {
 			info.Elf = elfInfo
+		}
+	case "application/x-ms-shortcut":
+		lnkInfo, err := lnk.Parse(r)
+		if err == nil {
+			info.LNK = lnkInfo
 		}
 	}
 

@@ -1,0 +1,54 @@
+{
+  "mime": "application/x-ms-shortcut",
+  "md5": "435a19985b69db61cbe8544c61301757",
+  "sha1": "2529bb999e20c5b563d39a2a57fcf41f720c8382",
+  "sha256": "cd3b54b42775fe0805ae2ecd02330c9b0cce20f20265ef8f631882a4e4274857",
+  "size": 1270,
+  "lnk": {
+    "header": {
+      "guid": "01140200-0000-0000-c000-000000000046",
+      "linkFlags": [
+        "ForceNoLinkInfo",
+        "HasExpString",
+        "HasIconLocation",
+        "HasName",
+        "HasRelativePath",
+        "HasWorkingDir",
+        "IsUnicode",
+        "PreferEnvironmentPath"
+      ],
+      "fileFlags": [
+        "FILE_ATTRIBUTE_ARCHIVE"
+      ],
+      "creationTime": "2009-07-13T20:11:56-04:00",
+      "accessedTime": "2009-07-13T20:11:56-04:00",
+      "modifiedTime": "2009-07-13T21:14:28-04:00",
+      "fileSize": 86016,
+      "iconIndex": 4294965857,
+      "windowStyle": "SW_NORMAL"
+    },
+    "name": "@%windir%\\system32\\odbcint.dll,-1312",
+    "relativePath": "..\\..\\..\\..\\..\\..\\Windows\\System32\\odbcad32.exe",
+    "workingDirectory": "%windir%\\system32",
+    "iconLocation": "%windir%\\system32\\odbcint.dll",
+    "extra": {
+      "environment": {
+        "ansi": "%windir%\\system32\\odbcad32.exe",
+        "unicode": "%windir%\\system32\\odbcad32.exe"
+      },
+      "propertyStore": {},
+      "tracker": {
+        "version": 0,
+        "machineId": "win-dc3j5p1qj61",
+        "droid": [
+          "a6b30b54-1b3f-044f-b746-9c5af7c07867",
+          "fcc69ae2-3770-de11-816d-001c23e25b76"
+        ],
+        "droidBirth": [
+          "a6b30b54-1b3f-044f-b746-9c5af7c07867",
+          "fcc69ae2-3770-de11-816d-001c23e25b76"
+        ]
+      }
+    }
+  }
+}
