@@ -10,4 +10,4 @@ require (
 	github.com/stretchr/testify v1.5.1
 )
 
-replace github.com/h2non/filetype => ../filetype
+replace github.com/h2non/filetype => github.com/andrewstucki/filetype v1.0.13-0.20200822020248-6768590be8b3
