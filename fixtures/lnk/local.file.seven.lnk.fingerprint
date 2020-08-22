@@ -66,7 +66,7 @@
       "commonPathSuffix": "root\\Desktop\\Fatality.rdp",
       "volume": {
         "driveType": "DRIVE_FIXED",
-        "driveSerialNumber": 1345198730,
+        "driveSerialNumber": "0x502e1a8a",
         "volumeLabel": "SSD-WIN7"
       },
       "localBasePath": "C:\\Users\\",

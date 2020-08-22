@@ -3,6 +3,7 @@ package lnk
 import (
 	"encoding/binary"
 	"errors"
+	"fmt"
 	"io"
 
 	"github.com/andrewstucki/fingerprint/internal"
@@ -166,7 +167,7 @@ func parseVolumeInfo(data []byte) (*Volume, error) {
 	}
 	return &Volume{
 		DriveType:         normalizedDriveType,
-		DriveSerialNumber: driveSerialNumber,
+		DriveSerialNumber: fmt.Sprintf("0x%08x", driveSerialNumber),
 		VolumeLabel:       volumeLabel,
 	}, nil
 }

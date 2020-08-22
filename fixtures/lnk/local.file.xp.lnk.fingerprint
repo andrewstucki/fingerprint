@@ -52,7 +52,7 @@
       ],
       "volume": {
         "driveType": "DRIVE_FIXED",
-        "driveSerialNumber": 280870099,
+        "driveSerialNumber": "0x10bdbcd3",
         "volumeLabel": "SYSTEM"
       },
       "localBasePath": "C:\\WINDOWS\\desktop.ini"

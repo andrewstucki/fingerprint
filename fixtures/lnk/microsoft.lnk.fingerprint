@@ -52,7 +52,7 @@
       ],
       "volume": {
         "driveType": "DRIVE_FIXED",
-        "driveSerialNumber": 813337217
+        "driveSerialNumber": "0x307a8a81"
       },
       "localBasePath": "C:\\test\\a.txt"
     },

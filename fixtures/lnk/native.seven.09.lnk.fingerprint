@@ -59,7 +59,7 @@
       ],
       "volume": {
         "driveType": "DRIVE_FIXED",
-        "driveSerialNumber": 1345198730
+        "driveSerialNumber": "0x502e1a8a"
       },
       "localBasePath": "C:\\Windows\\System32\\fsquirt.exe"
     },

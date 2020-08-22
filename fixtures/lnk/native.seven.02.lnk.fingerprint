@@ -30,7 +30,7 @@
       ],
       "volume": {
         "driveType": "DRIVE_FIXED",
-        "driveSerialNumber": 1046335112
+        "driveSerialNumber": "0x3e5dce88"
       },
       "localBasePath": "C:\\Users\\Aldheris\\Desktop"
     },

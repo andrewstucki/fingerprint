@@ -81,7 +81,7 @@
       ],
       "volume": {
         "driveType": "DRIVE_FIXED",
-        "driveSerialNumber": 3503650547,
+        "driveSerialNumber": "0xd0d576f3",
         "volumeLabel": "DATA"
       },
       "localBasePath": "D:\\Devl.Net\\@Perso\\Shellify\\ShellifyTool\\bin\\Debug\\ShellifyTool.exe"

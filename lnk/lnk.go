@@ -118,7 +118,7 @@ type Extra struct {
 type Volume struct {
 	// https://github.com/libyal/liblnk/blob/master/documentation/Windows%20Shortcut%20File%20(LNK)%20format.asciidoc#42-volume-information
 	DriveType         string `json:"driveType,omitempty"`
-	DriveSerialNumber uint32 `json:"driveSerialNumber,omitempty"`
+	DriveSerialNumber string `json:"driveSerialNumber,omitempty"`
 	VolumeLabel       string `json:"volumeLabel,omitempty"`
 }
 

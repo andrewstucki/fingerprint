@@ -55,7 +55,7 @@
       ],
       "volume": {
         "driveType": "DRIVE_FIXED",
-        "driveSerialNumber": 3090345874
+        "driveSerialNumber": "0xb832ef92"
       },
       "localBasePath": "C:\\WINDOWS\\explorer.exe"
     },

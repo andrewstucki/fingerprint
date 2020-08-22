@@ -53,7 +53,7 @@
       ],
       "volume": {
         "driveType": "DRIVE_FIXED",
-        "driveSerialNumber": 3466332551,
+        "driveSerialNumber": "0xce9c0987",
         "volumeLabel": "System"
       },
       "localBasePath": "C:\\Temp\\??.txt"
