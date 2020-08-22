@@ -203,7 +203,7 @@ func normalizeTime(value uint64) *time.Time {
 	if value == 0 {
 		return nil
 	}
-	timestamp := time.Unix(int64(windowsTimeToUnix(value)), 0)
+	timestamp := time.Unix(int64(windowsTimeToUnix(value)), 0).UTC()
 	return &timestamp
 }
 

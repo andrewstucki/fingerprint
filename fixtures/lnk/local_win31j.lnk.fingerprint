@@ -21,9 +21,9 @@
         "FILE_ATTRIBUTE_ARCHIVE",
         "FILE_ATTRIBUTE_NOT_CONTENT_INDEXED"
       ],
-      "creationTime": "2019-06-30T09:51:53-04:00",
-      "accessedTime": "2019-06-30T09:51:53-04:00",
-      "modifiedTime": "2019-06-30T09:52:01-04:00",
+      "creationTime": "2019-06-30T13:51:53Z",
+      "accessedTime": "2019-06-30T13:51:53Z",
+      "modifiedTime": "2019-06-30T13:52:01Z",
       "fileSize": 10,
       "iconIndex": 70,
       "windowStyle": "SW_NORMAL"
