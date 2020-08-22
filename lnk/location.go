@@ -161,7 +161,7 @@ func parseVolumeInfo(data []byte) (*Volume, error) {
 	}
 
 	normalizedDriveType := "DRIVE_UNKNOWN"
-	if uint32(len(driveTypes)) < driveType {
+	if uint32(len(driveTypes)) > driveType {
 		normalizedDriveType = driveTypes[driveType]
 	}
 	return &Volume{

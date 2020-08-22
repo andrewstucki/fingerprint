@@ -65,7 +65,7 @@
       ],
       "commonPathSuffix": "root\\Desktop\\Fatality.rdp",
       "volume": {
-        "driveType": "DRIVE_UNKNOWN",
+        "driveType": "DRIVE_FIXED",
         "driveSerialNumber": 1345198730,
         "volumeLabel": "SSD-WIN7"
       },

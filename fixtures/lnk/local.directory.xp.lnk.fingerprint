@@ -50,7 +50,7 @@
         "VolumeIDAndLocalBasePath"
       ],
       "volume": {
-        "driveType": "DRIVE_UNKNOWN",
+        "driveType": "DRIVE_FIXED",
         "driveSerialNumber": 280870099,
         "volumeLabel": "SYSTEM"
       },

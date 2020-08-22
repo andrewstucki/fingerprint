@@ -10,6 +10,7 @@ import (
 )
 
 func TestBinaries(t *testing.T) {
+	generate := os.Getenv("GENERATE") == "1"
 	binaries := []string{
 		// pe
 		"calc.exe",
@@ -112,18 +113,25 @@ func TestBinaries(t *testing.T) {
 			fileInfo, err := f.Stat()
 			require.NoError(t, err)
 
-			fixture, err := os.Open("./fixtures/" + binary + ".fingerprint")
-			require.NoError(t, err)
-			defer fixture.Close()
-			expected, err := ioutil.ReadAll(fixture)
-			require.NoError(t, err)
-
 			info, err := Parse(f, int(fileInfo.Size()))
 			require.NoError(t, err)
 
-			data, err := json.Marshal(info)
-			require.NoError(t, err)
-			require.JSONEq(t, string(expected), string(data))
+			expectedFile := "./fixtures/" + binary + ".fingerprint"
+			if generate {
+				data, err := json.MarshalIndent(info, "", "  ")
+				require.NoError(t, err)
+				require.NoError(t, ioutil.WriteFile(expectedFile, data, 0644))
+			} else {
+				fixture, err := os.Open(expectedFile)
+				require.NoError(t, err)
+				defer fixture.Close()
+				expected, err := ioutil.ReadAll(fixture)
+				require.NoError(t, err)
+
+				data, err := json.Marshal(info)
+				require.NoError(t, err)
+				require.JSONEq(t, string(expected), string(data))
+			}
 		})
 	}
 }

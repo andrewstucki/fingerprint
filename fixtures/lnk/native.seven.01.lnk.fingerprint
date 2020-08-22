@@ -56,7 +56,7 @@
         "VolumeIDAndLocalBasePath"
       ],
       "volume": {
-        "driveType": "DRIVE_UNKNOWN",
+        "driveType": "DRIVE_FIXED",
         "driveSerialNumber": 1046335112
       },
       "localBasePath": "C:\\Program Files\\ConTEXT\\ConTEXT.exe"
