@@ -115,7 +115,7 @@
         "windowOriginX": 0,
         "windowOriginY": 0,
         "fontSize": 1048576,
-        "fontFamily": "FF_ROMAN | TMPF_VECTOR",
+        "fontFamily": "FF_MODERN | TMPF_DEVICE | TMPF_TRUETYPE | TMPF_VECTOR",
         "fontWeight": 400,
         "faceName": "Lucida Console",
         "cursorSize": 100,

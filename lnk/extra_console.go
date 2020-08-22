@@ -4,6 +4,8 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
+	"sort"
+	"strings"
 
 	"github.com/andrewstucki/fingerprint/internal"
 )
@@ -66,19 +68,27 @@ func parseExtraConsole(size uint32, data []byte) (*Console, error) {
 }
 
 func normalizeFontFamily(value uint32) string {
-	var font string
+	fontTokens := []string{}
 	for flag, name := range fontFamilies {
-		if hasFlag(value, flag) {
-			font = name + " | "
+		if 0xFFF0&value == flag {
+			fontTokens = append(fontTokens, name)
 			break
 		}
 	}
+	if len(fontTokens) == 0 {
+		return ""
+	}
+	pitchValue := 0x000F & value
 	for flag, name := range fontPitches {
-		if hasFlag(value, flag) {
-			return font + name
+		if hasFlag(pitchValue, flag) {
+			fontTokens = append(fontTokens, name)
 		}
 	}
-	return ""
+	if len(fontTokens) == 1 {
+		fontTokens = append(fontTokens, "TMPF_NONE")
+	}
+	sort.Strings(fontTokens)
+	return strings.Join(fontTokens, " | ")
 }
 
 func normalizeBoolean(value uint32) bool {

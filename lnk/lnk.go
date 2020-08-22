@@ -9,8 +9,8 @@ import (
 
 // Console contains LNK extra console data block info
 type Console struct {
-	FillAttributes         []string `json:"fillAttributes"`
-	PopupFillAttributes    []string `json:"popupFillAttributes"`
+	FillAttributes         []string `json:"fillAttributes,omitempty"`
+	PopupFillAttributes    []string `json:"popupFillAttributes,omitempty"`
 	ScreenBufferSizeX      uint16   `json:"screenBufferSizeX"`
 	ScreenBufferSizeY      uint16   `json:"screenBufferSizeY"`
 	WindowSizeX            uint16   `json:"windowSizeX"`
@@ -18,9 +18,9 @@ type Console struct {
 	WindowOriginX          uint16   `json:"windowOriginX"`
 	WindowOriginY          uint16   `json:"windowOriginY"`
 	FontSize               uint32   `json:"fontSize"`
-	FontFamily             string   `json:"fontFamily"`
+	FontFamily             string   `json:"fontFamily,omitempty"`
 	FontWeight             uint32   `json:"fontWeight"`
-	FaceName               string   `json:"faceName"`
+	FaceName               string   `json:"faceName,omitempty"`
 	CursorSize             uint32   `json:"cursorSize"`
 	FullScreen             bool     `json:"fullScreen"`
 	QuickEdit              bool     `json:"quickEdit"`
