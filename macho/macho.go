@@ -11,11 +11,12 @@ import (
 
 // Section contains information about a section in a mach-o file.
 type Section struct {
-	Name    string  `json:"name"`
-	Address uint64  `json:"address"`
-	Size    uint64  `json:"size"`
-	Entropy float64 `json:"entropy"`
-	MD5     string  `json:"md5,omitempty"`
+	Name      string  `json:"name"`
+	Address   uint64  `json:"address"`
+	Size      uint64  `json:"size"`
+	Entropy   float64 `json:"entropy"`
+	ChiSquare float64 `json:"chi2"`
+	MD5       string  `json:"md5,omitempty"`
 }
 
 // Architecture represents a fat file architecture
@@ -106,6 +107,7 @@ func parse(machoFile *macho.File) (*Architecture, error) {
 	for i, section := range machoFile.Sections {
 		var md5String string
 		var entropy float64
+		var chiSquare float64
 
 		data, err := section.Data()
 		if err != nil {
@@ -116,13 +118,15 @@ func parse(machoFile *macho.File) (*Architecture, error) {
 			md5hash := md5.Sum(data)
 			md5String = hex.EncodeToString(md5hash[:])
 			entropy = internal.Entropy(data)
+			chiSquare = internal.ChiSquare(data)
 		}
 		sections[i] = Section{
-			Name:    section.Name,
-			Address: section.Addr,
-			Size:    section.Size,
-			Entropy: entropy,
-			MD5:     md5String,
+			Name:      section.Name,
+			Address:   section.Addr,
+			Size:      section.Size,
+			Entropy:   entropy,
+			ChiSquare: chiSquare,
+			MD5:       md5String,
 		}
 	}
 

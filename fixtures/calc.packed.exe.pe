@@ -6,6 +6,7 @@
       "virtualSize": 622592,
       "rawSize": 0,
       "entropy": 0,
+      "chi2": 0,
       "md5": "d41d8cd98f00b204e9800998ecf8427e"
     },
     {
@@ -14,6 +15,7 @@
       "virtualSize": 319488,
       "rawSize": 315904,
       "entropy": 7.9,
+      "chi2": 66585.62,
       "md5": "95a1359c96fc0322d471d4ae6a85dbe7"
     },
     {
@@ -22,6 +24,7 @@
       "virtualSize": 94208,
       "rawSize": 90624,
       "entropy": 6.38,
+      "chi2": 1708924.8,
       "md5": "e10545915539e091db28fa365b2d1a54"
     }
   ],

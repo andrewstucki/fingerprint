@@ -86,6 +86,7 @@
       "size": 36,
       "offset": 308,
       "entropy": 4.19,
+      "chi2": 874.22,
       "flags": "ALLOC",
       "md5": "4cc65d4abcb3a4935f24cad8264de6d9"
     },
@@ -96,6 +97,7 @@
       "size": 13404,
       "offset": 344,
       "entropy": 6.79,
+      "chi2": 173005.22,
       "flags": "ALLOC",
       "md5": "b39d64c028568c0573dd72b06821654f"
     },
@@ -106,6 +108,7 @@
       "size": 30864,
       "offset": 13748,
       "entropy": 4.2,
+      "chi2": 2139933.87,
       "flags": "ALLOC",
       "md5": "5f756196d5296a74df1ba19183594e54"
     },
@@ -116,6 +119,7 @@
       "size": 37220,
       "offset": 44612,
       "entropy": 4.96,
+      "chi2": 387559.11,
       "flags": "ALLOC",
       "md5": "3655a987e1475794a236eb084b23e214"
     },
@@ -126,6 +130,7 @@
       "size": 3858,
       "offset": 81832,
       "entropy": 2.4,
+      "chi2": 333497.31,
       "flags": "ALLOC",
       "md5": "da0e54da830e04e5e8d1b1ff1406e5d1"
     },
@@ -136,6 +141,7 @@
       "size": 1496,
       "offset": 85692,
       "entropy": 3.01,
+      "chi2": 144202.22,
       "flags": "ALLOC",
       "md5": "169975af3363300ee74c6ccbf7462f06"
     },
@@ -146,6 +152,7 @@
       "size": 352,
       "offset": 87188,
       "entropy": 3.29,
+      "chi2": 27461.82,
       "flags": "ALLOC",
       "md5": "8729d6a47403e235db3c3ad7e038c5e2"
     },
@@ -156,6 +163,7 @@
       "size": 26344,
       "offset": 87540,
       "entropy": 3.55,
+      "chi2": 1819102.92,
       "flags": "ALLOC",
       "md5": "5fc923b089317a28dfff03eaaf7bb9d3"
     },
@@ -166,6 +174,7 @@
       "size": 1632,
       "offset": 113884,
       "entropy": 4.43,
+      "chi2": 58853.33,
       "flags": "ALLOC | INFO_LINK",
       "md5": "900350fbd1680f1dab385289e7a094d8"
     },
@@ -176,6 +185,7 @@
       "size": 36,
       "offset": 115516,
       "entropy": 4.6,
+      "chi2": 433.33,
       "flags": "ALLOC | EXECINSTR",
       "md5": "5350e48d5df9f3c81c5dd297e5ac3052"
     },
@@ -186,6 +196,7 @@
       "size": 3280,
       "offset": 115552,
       "entropy": 4.54,
+      "chi2": 55254.71,
       "flags": "ALLOC | EXECINSTR",
       "md5": "2e6ac0bd6221f9eeca337bf62be912ad"
     },
@@ -196,6 +207,7 @@
       "size": 3264,
       "offset": 118832,
       "entropy": 3.75,
+      "chi2": 97448.47,
       "flags": "ALLOC | EXECINSTR",
       "md5": "6b287f5e1c7d2dbb6146b1123c85ce02"
     },
@@ -206,6 +218,7 @@
       "size": 955592,
       "offset": 122096,
       "entropy": 6.34,
+      "chi2": 6662612.74,
       "flags": "ALLOC | EXECINSTR",
       "md5": "632d345ab77df2f401677b5f6ccb549a"
     },
@@ -216,6 +229,7 @@
       "size": 24,
       "offset": 1077688,
       "entropy": 4.25,
+      "chi2": 317.33,
       "flags": "ALLOC | EXECINSTR",
       "md5": "e117f67930b550ccd603b01bd6e14117"
     },
@@ -226,6 +240,7 @@
       "size": 130272,
       "offset": 1077728,
       "entropy": 5.86,
+      "chi2": 992953.94,
       "flags": "ALLOC",
       "md5": "1d7d51592cc84ecb27160304399c204d"
     },
@@ -236,6 +251,7 @@
       "size": 21252,
       "offset": 1208000,
       "entropy": 6.21,
+      "chi2": 224116.82,
       "flags": "ALLOC",
       "md5": "a6de1b4bf7f3b0264b63a253f8f9c461"
     },
@@ -246,6 +262,7 @@
       "size": 327112,
       "offset": 1229252,
       "entropy": 5.34,
+      "chi2": 5888769.14,
       "flags": "ALLOC",
       "md5": "91e7f4571e658247e3398d495cecaec1"
     },
@@ -256,6 +273,7 @@
       "size": 28,
       "offset": 1556364,
       "entropy": 2.06,
+      "chi2": 3044,
       "flags": "ALLOC",
       "md5": "9ab46ba29f669fd1aabf269aceda7129"
     },
@@ -266,6 +284,7 @@
       "size": 4,
       "offset": 1559288,
       "entropy": 2,
+      "chi2": 252,
       "flags": "WRITE | ALLOC",
       "md5": "89d10709e86791fe2aaf0d5a937ee24b"
     },
@@ -276,6 +295,7 @@
       "size": 4,
       "offset": 1559292,
       "entropy": 2,
+      "chi2": 252,
       "flags": "WRITE | ALLOC",
       "md5": "cfb2296eb626c8482aa0b048010942bb"
     },
@@ -286,6 +306,7 @@
       "size": 16200,
       "offset": 1559296,
       "entropy": 4.55,
+      "chi2": 782613.39,
       "flags": "WRITE | ALLOC",
       "md5": "a7d18ec26a48f29a5220a5ca6a953eeb"
     },
@@ -296,6 +317,7 @@
       "size": 296,
       "offset": 1575496,
       "entropy": 3.14,
+      "chi2": 27056.22,
       "flags": "WRITE | ALLOC",
       "md5": "f54862e8f0fb699e2c2bd64adbac0f9e"
     },
@@ -306,6 +328,7 @@
       "size": 1152,
       "offset": 1575792,
       "entropy": 3.15,
+      "chi2": 76580,
       "flags": "WRITE | ALLOC",
       "md5": "cd4e251d2ed4017861ab4e70c695c278"
     },
@@ -316,6 +339,7 @@
       "size": 1784,
       "offset": 1576960,
       "entropy": 3.42,
+      "chi2": 161906.76,
       "flags": "WRITE | ALLOC",
       "md5": "c1ea9add050bdf788846adafc446d7f2"
     },
@@ -326,6 +350,7 @@
       "size": 3796,
       "offset": 1578744,
       "entropy": 7.62,
+      "chi2": 8093.03,
       "flags": "WRITE | ALLOC",
       "md5": "acfbb8a24167321223dc0fb8e1aebf56"
     },
@@ -336,6 +361,7 @@
       "size": 684,
       "offset": 1578744,
       "entropy": 3.84,
+      "chi2": 42576.26,
       "flags": "-",
       "md5": "bdfccada9b1e41caeb1639b1e3754806"
     },
@@ -346,6 +372,7 @@
       "size": 44,
       "offset": 1579428,
       "entropy": 4.21,
+      "chi2": 805.45,
       "flags": "-",
       "md5": "98b8d575b3f763f6f4a99c20f09e6bf7"
     },
@@ -356,6 +383,7 @@
       "size": 34936,
       "offset": 1579472,
       "entropy": 7.99,
+      "chi2": 251.94,
       "flags": "-",
       "md5": "87185f593d9ba65f16e7363dc8ed961e"
     },
@@ -366,6 +394,7 @@
       "size": 309,
       "offset": 1614408,
       "entropy": 4.24,
+      "chi2": 4782,
       "flags": "-",
       "md5": "e428b86fa7f6fb50556c14fce61c43c0"
     }

@@ -17,6 +17,7 @@ type Section struct {
 	VirtualSize    uint32  `json:"virtualSize"`
 	RawSize        uint32  `json:"rawSize"`
 	Entropy        float64 `json:"entropy"`
+	ChiSquare      float64 `json:"chi2"`
 	MD5            string  `json:"md5,omitempty"`
 }
 
@@ -131,6 +132,7 @@ func Parse(r io.ReaderAt) (*Info, error) {
 			VirtualSize:    section.VirtualSize,
 			RawSize:        section.Size,
 			Entropy:        internal.Entropy(data),
+			ChiSquare:      internal.ChiSquare(data),
 			MD5:            hashed,
 		}
 

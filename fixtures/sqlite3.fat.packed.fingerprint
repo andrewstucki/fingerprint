@@ -15,6 +15,7 @@
             "address": 4294968240,
             "size": 613456,
             "entropy": 7.89,
+            "chi2": 108057.28,
             "md5": "51c804ddbae53d6968beca31db4d4e96"
           }
         ],
@@ -28,6 +29,7 @@
             "address": 4294968240,
             "size": 609360,
             "entropy": 7.89,
+            "chi2": 106257.07,
             "md5": "d08d8804df740cdaa4b863b8c649acdf"
           }
         ],

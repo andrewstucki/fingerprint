@@ -8,6 +8,7 @@
           "address": 4294971232,
           "size": 42,
           "entropy": 4.04,
+          "chi2": 1030.76,
           "md5": "77166fb4124bfa15ceebf0b9425cda23"
         },
         {
@@ -15,6 +16,7 @@
           "address": 4294971274,
           "size": 6,
           "entropy": 2.25,
+          "chi2": 335.33,
           "md5": "f9e07e9c40c24082fdf9f1eab3c8137c"
         },
         {
@@ -22,6 +24,7 @@
           "address": 4294971280,
           "size": 26,
           "entropy": 3.3,
+          "chi2": 1057.08,
           "md5": "7277b077b4cc51c5284ccaf6077babca"
         },
         {
@@ -29,6 +32,7 @@
           "address": 4294971306,
           "size": 13,
           "entropy": 3.18,
+          "chi2": 400.54,
           "md5": "42506346e9e4b7d35b13978983e627b0"
         },
         {
@@ -36,6 +40,7 @@
           "address": 4294971320,
           "size": 72,
           "entropy": 1.58,
+          "chi2": 10452.44,
           "md5": "5a85d345ab9f929bf8ee00e141401105"
         },
         {
@@ -43,6 +48,7 @@
           "address": 4294971392,
           "size": 8,
           "entropy": 0,
+          "chi2": 2040,
           "md5": "7dea362b3fac8e00956a4952a3d4f474"
         },
         {
@@ -50,6 +56,7 @@
           "address": 4294975488,
           "size": 8,
           "entropy": 1.55,
+          "chi2": 888,
           "md5": "a8f250ea011781d751ad55c91ce4d39c"
         },
         {
@@ -57,6 +64,7 @@
           "address": 4294975496,
           "size": 8,
           "entropy": 0,
+          "chi2": 2040,
           "md5": "7dea362b3fac8e00956a4952a3d4f474"
         }
       ],

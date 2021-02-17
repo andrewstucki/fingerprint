@@ -56,6 +56,7 @@
       "size": 591289,
       "offset": 4096,
       "entropy": 5.95,
+      "chi2": 5996501.27,
       "flags": "ALLOC | EXECINSTR",
       "md5": "76055c015b5ad80fb013413161c74b22"
     },
@@ -66,6 +67,7 @@
       "size": 307978,
       "offset": 598016,
       "entropy": 4.25,
+      "chi2": 20910214.65,
       "flags": "ALLOC",
       "md5": "4a58b60686e14a3d09b9fa4d6afdd887"
     },
@@ -76,6 +78,7 @@
       "size": 2716,
       "offset": 906208,
       "entropy": 4.35,
+      "chi2": 134533.74,
       "flags": "ALLOC",
       "md5": "affc3fbb46aae38f9972074ab550ef5f"
     },
@@ -86,6 +89,7 @@
       "size": 80,
       "offset": 908928,
       "entropy": 2.01,
+      "chi2": 9008,
       "flags": "ALLOC",
       "md5": "9f76863ef1b0ec20821b80f399954245"
     },
@@ -96,6 +100,7 @@
       "size": 0,
       "offset": 909008,
       "entropy": 0,
+      "chi2": 0,
       "flags": "ALLOC",
       "md5": "d41d8cd98f00b204e9800998ecf8427e"
     },
@@ -106,6 +111,7 @@
       "size": 461210,
       "offset": 909024,
       "entropy": 5.6,
+      "chi2": 8745216.04,
       "flags": "ALLOC",
       "md5": "9e76ee6caf69e400e9fc59f82a5c5929"
     },
@@ -116,6 +122,7 @@
       "size": 32,
       "offset": 1372160,
       "entropy": 3.62,
+      "chi2": 1152,
       "flags": "WRITE | ALLOC",
       "md5": "119d6bd52103acaa6d4d2985fcd71c1f"
     },
@@ -126,6 +133,7 @@
       "size": 57504,
       "offset": 1372192,
       "entropy": 5.01,
+      "chi2": 2359525.8,
       "flags": "WRITE | ALLOC",
       "md5": "61f2addcbfc7ff6f1a7a8f9031ab9d03"
     },
@@ -136,6 +144,7 @@
       "size": 28944,
       "offset": 1429696,
       "entropy": 1.52,
+      "chi2": 5392758.44,
       "flags": "WRITE | ALLOC",
       "md5": "7a1ca3186c6c8f307c5185d3f8fe77f3"
     },
@@ -146,6 +155,7 @@
       "size": 170384,
       "offset": 1458640,
       "entropy": 0,
+      "chi2": 0,
       "flags": "WRITE | ALLOC"
     },
     {
@@ -155,6 +165,7 @@
       "size": 10312,
       "offset": 1458640,
       "entropy": 0,
+      "chi2": 0,
       "flags": "WRITE | ALLOC"
     },
     {
@@ -164,6 +175,7 @@
       "size": 100,
       "offset": 3996,
       "entropy": 5.33,
+      "chi2": 770.4,
       "flags": "ALLOC",
       "md5": "6f25cd73136d79e9e0cd8848b94b1801"
     },
@@ -174,6 +186,7 @@
       "size": 129,
       "offset": 1458640,
       "entropy": 4.09,
+      "chi2": 2202.78,
       "flags": "-",
       "md5": "1115c70dcea0cda5af1fcff9fb927c93"
     }

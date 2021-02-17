@@ -6,6 +6,7 @@
       "virtualSize": 642528,
       "rawSize": 642560,
       "entropy": 5.91,
+      "chi2": 6952304.99,
       "md5": "5803aaa340571c292ea50c963c149393"
     },
     {
@@ -14,6 +15,7 @@
       "virtualSize": 808925,
       "rawSize": 808960,
       "entropy": 5.23,
+      "chi2": 26699471.32,
       "md5": "7086a2c570638b197ba9a7a787733941"
     },
     {
@@ -22,6 +24,7 @@
       "virtualSize": 277160,
       "rawSize": 84992,
       "entropy": 4.08,
+      "chi2": 6344425.16,
       "md5": "59511eb44d960bd896b7c1badc18b2ae"
     },
     {
@@ -30,6 +33,7 @@
       "virtualSize": 1090,
       "rawSize": 1536,
       "entropy": 3.44,
+      "chi2": 110263,
       "md5": "579191a6cc342da500b8b041834fda14"
     },
     {
@@ -38,6 +42,7 @@
       "virtualSize": 122136,
       "rawSize": 122368,
       "entropy": 5.2,
+      "chi2": 2221377.69,
       "md5": "17641dcfdd2e6848111eabcc48c67857"
     }
   ],
