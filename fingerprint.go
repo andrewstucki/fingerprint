@@ -20,6 +20,20 @@ import (
 // detection requires ~8kb to detect properly
 const headerSize = 8192
 
+var addedTypes = map[string]func([]byte) bool{
+	"application/x-ms-shortcut": lnkMatcher,
+}
+
+func init() {
+	for mimeType, matcher := range addedTypes {
+		filetype.AddMatcher(filetype.NewType(mimeType, mimeType), matcher)
+	}
+}
+
+func lnkMatcher(buf []byte) bool {
+	return len(buf) > 3 && (buf[0] == 0x4C && buf[1] == 0x00 && buf[2] == 0x00 && buf[3] == 0x00)
+}
+
 // Info contains fingerprinting information.
 type Info struct {
 	MIME   string      `json:"mime"`
