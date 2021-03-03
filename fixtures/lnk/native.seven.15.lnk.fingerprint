@@ -6,7 +6,7 @@
   "size": 1238,
   "lnk": {
     "header": {
-      "guid": "01140200-0000-0000-c000-000000000046",
+      "guid": "00021401-0000-0000-c000-000000000046",
       "linkFlags": [
         "ForceNoLinkInfo",
         "HasArguments",
@@ -41,12 +41,12 @@
         "version": 0,
         "machineId": "win-40r2agv20qa",
         "droid": [
-          "da667c4f-20d3-c44c-8d50-165dd98ebc01",
-          "fbd492f8-2061-df11-964c-ac3a656c3b1d"
+          "4f7c66da-d320-4cc4-8d50-165dd98ebc01",
+          "f892d4fb-6120-11df-964c-ac3a656c3b1d"
         ],
         "droidBirth": [
-          "da667c4f-20d3-c44c-8d50-165dd98ebc01",
-          "fbd492f8-2061-df11-964c-ac3a656c3b1d"
+          "4f7c66da-d320-4cc4-8d50-165dd98ebc01",
+          "f892d4fb-6120-11df-964c-ac3a656c3b1d"
         ]
       }
     }

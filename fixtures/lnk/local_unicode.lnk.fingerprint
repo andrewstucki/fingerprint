@@ -6,7 +6,7 @@
   "size": 848,
   "lnk": {
     "header": {
-      "guid": "01140200-0000-0000-c000-000000000046",
+      "guid": "00021401-0000-0000-c000-000000000046",
       "linkFlags": [
         "EnableTargetMetadata",
         "HasLinkInfo",
@@ -63,22 +63,22 @@
     "extra": {
       "propertyStore": {
         "properties": {
-          "10": [
+          "Item Folder Path Display": [
+            {
+              "type": "VT_LPWSTR",
+              "value": "C:\\Temp"
+            }
+          ],
+          "Item Name Display": [
             {
               "type": "VT_LPWSTR",
               "value": "💎.txt"
             }
           ],
-          "30": [
+          "Parsing Path": [
             {
               "type": "VT_LPWSTR",
               "value": "C:\\Temp\\💎.txt"
-            }
-          ],
-          "6": [
-            {
-              "type": "VT_LPWSTR",
-              "value": "C:\\Temp"
             }
           ]
         }
@@ -87,12 +87,12 @@
         "version": 0,
         "machineId": "test012345",
         "droid": [
-          "04c26c4d-cace-1647-8fa4-b334de43dd91",
-          "85b4edc2-68a1-e911-8328-bcee7b5dda94"
+          "4d6cc204-ceca-4716-8fa4-b334de43dd91",
+          "c2edb485-a168-11e9-8328-bcee7b5dda94"
         ],
         "droidBirth": [
-          "04c26c4d-cace-1647-8fa4-b334de43dd91",
-          "85b4edc2-68a1-e911-8328-bcee7b5dda94"
+          "4d6cc204-ceca-4716-8fa4-b334de43dd91",
+          "c2edb485-a168-11e9-8328-bcee7b5dda94"
         ]
       }
     }

@@ -6,7 +6,7 @@
   "size": 1803,
   "lnk": {
     "header": {
-      "guid": "01140200-0000-0000-c000-000000000046",
+      "guid": "00021401-0000-0000-c000-000000000046",
       "linkFlags": [
         "EnableTargetMetadata",
         "HasExpString",
@@ -44,22 +44,22 @@
       },
       "propertyStore": {
         "properties": {
-          "10": [
+          "Item Folder Path Display": [
+            {
+              "type": "VT_LPWSTR",
+              "value": "\\\\test\\📂"
+            }
+          ],
+          "Item Name Display": [
             {
               "type": "VT_LPWSTR",
               "value": "リンク先.txt"
             }
           ],
-          "30": [
+          "Parsing Path": [
             {
               "type": "VT_LPWSTR",
               "value": "\\\\test\\📂\\リンク先.txt"
-            }
-          ],
-          "6": [
-            {
-              "type": "VT_LPWSTR",
-              "value": "\\\\test\\📂"
             }
           ]
         }
@@ -68,12 +68,12 @@
         "version": 0,
         "machineId": "test",
         "droid": [
-          "5337f18a-4bd4-98f1-1366-c15ed7085770",
-          "04a80000-0000-0000-3346-190000000000"
+          "8af13753-d44b-f198-1366-c15ed7085770",
+          "0000a804-0000-0000-3346-190000000000"
         ],
         "droidBirth": [
-          "5237f18a-4bd4-98f1-1366-c15ed7085770",
-          "04a80000-0000-0000-3346-190000000000"
+          "8af13752-d44b-f198-1366-c15ed7085770",
+          "0000a804-0000-0000-3346-190000000000"
         ]
       },
       "vistaAndAboveIdList": {

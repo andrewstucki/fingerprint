@@ -6,7 +6,7 @@
   "size": 1733,
   "lnk": {
     "header": {
-      "guid": "01140200-0000-0000-c000-000000000046",
+      "guid": "00021401-0000-0000-c000-000000000046",
       "linkFlags": [
         "DisableKnownFolderTracking",
         "HasExpString",
@@ -44,12 +44,12 @@
         "version": 0,
         "machineId": "fatality",
         "droid": [
-          "d6f88e11-2d40-8641-b384-3527d35fb1eb",
-          "1f268538-7491-df11-9091-8fae47a32577"
+          "118ef8d6-402d-4186-b384-3527d35fb1eb",
+          "3885261f-9174-11df-9091-8fae47a32577"
         ],
         "droidBirth": [
-          "d6f88e11-2d40-8641-b384-3527d35fb1eb",
-          "1f268538-7491-df11-9091-8fae47a32577"
+          "118ef8d6-402d-4186-b384-3527d35fb1eb",
+          "3885261f-9174-11df-9091-8fae47a32577"
         ]
       },
       "vistaAndAboveIdList": {

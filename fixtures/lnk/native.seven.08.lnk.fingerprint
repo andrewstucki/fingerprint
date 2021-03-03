@@ -6,7 +6,7 @@
   "size": 3115,
   "lnk": {
     "header": {
-      "guid": "01140200-0000-0000-c000-000000000046",
+      "guid": "00021401-0000-0000-c000-000000000046",
       "linkFlags": [
         "HasDarwinID",
         "HasExpIcon",
@@ -66,16 +66,16 @@
       },
       "propertyStore": {
         "properties": {
-          "6": [
-            {
-              "type": "VT_LPWSTR",
-              "value": "Importez et organisez des photos, des images clip art, des fichiers sons et animation à l'aide de la Bibliothèque multimédia Microsoft."
-            }
-          ],
-          "8": [
+          "App User Model Exclude From Show In New Install": [
             {
               "type": "VT_BOOL",
               "value": true
+            }
+          ],
+          "Comment": [
+            {
+              "type": "VT_LPWSTR",
+              "value": "Importez et organisez des photos, des images clip art, des fichiers sons et animation à l'aide de la Bibliothèque multimédia Microsoft."
             }
           ]
         }

@@ -6,7 +6,7 @@
   "size": 1074,
   "lnk": {
     "header": {
-      "guid": "01140200-0000-0000-c000-000000000046",
+      "guid": "00021401-0000-0000-c000-000000000046",
       "linkFlags": [
         "HasLinkInfo",
         "HasTargetIDList",
@@ -96,11 +96,11 @@
         "machineId": "als-fichiers7",
         "droid": [
           "00000000-0000-0000-0000-000000000000",
-          "06cd1d4d-e5fc-dc11-8902-0015c5fbcbe3"
+          "4d1dcd06-fce5-11dc-8902-0015c5fbcbe3"
         ],
         "droidBirth": [
           "00000000-0000-0000-0000-000000000000",
-          "06cd1d4d-e5fc-dc11-8902-0015c5fbcbe3"
+          "4d1dcd06-fce5-11dc-8902-0015c5fbcbe3"
         ]
       }
     }
