@@ -203,18 +203,14 @@ func parseProperties(identifier string, data []byte) (string, []Property, error)
 	if propertySize == 0 {
 		return "", nil, nil
 	}
-	name := identifier + "\\"
 	id := binary.LittleEndian.Uint32(data[4:8])
+	name := identifier + "\\" + strconv.Itoa(int(id))
 	knownFormat, known := knownProperties[identifier]
 	if known {
 		idName, knownName := knownFormat[id]
 		if knownName {
-			name = name + idName
-		} else {
-			name = name + strconv.Itoa(int(id))
+			name = idName
 		}
-	} else {
-		name = name + strconv.Itoa(int(id))
 	}
 
 	_, value, err := parseTypedValue(data[9:propertySize])
