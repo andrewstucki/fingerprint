@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/blacktop/go-macho v1.1.30
+	github.com/fullsailor/pkcs7 v0.0.0-20190404230743-d7302db945fa
 	github.com/go-errors/errors v1.0.2
 	github.com/h2non/filetype v1.1.2-0.20210202002709-95e28344e08c
 	github.com/knightsc/gapstone v4.0.1+incompatible

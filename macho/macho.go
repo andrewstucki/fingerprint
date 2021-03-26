@@ -21,15 +21,22 @@ type Section struct {
 	MD5       string  `json:"md5,omitempty"`
 }
 
+// Signature contains signing information about a binary
+type Signature struct {
+	Signer string `json:"signer"`
+	CDHash string `json:"cdhash"`
+}
+
 // Architecture represents a fat file architecture
 type Architecture struct {
-	CPU       string    `json:"cpu"`
-	Sections  []Section `json:"sections,omitempty"`
-	Libraries []string  `json:"libraries,omitempty"`
-	Imports   []string  `json:"imports,omitempty"`
-	Exports   []string  `json:"exports,omitempty"`
-	Packer    string    `json:"packer,omitempty"`
-	Symhash   string    `json:"symhash,omitempty"`
+	CPU       string     `json:"cpu"`
+	Sections  []Section  `json:"sections,omitempty"`
+	Libraries []string   `json:"libraries,omitempty"`
+	Imports   []string   `json:"imports,omitempty"`
+	Exports   []string   `json:"exports,omitempty"`
+	Packer    string     `json:"packer,omitempty"`
+	Symhash   string     `json:"symhash,omitempty"`
+	Signature *Signature `json:"signature,omitempty"`
 }
 
 // Info contains high level fingerprinting an analysis of a mach-o file.
@@ -105,6 +112,10 @@ func parse(machoFile *macho.File) (*Architecture, error) {
 	for i, symbol := range importSymbols {
 		importSymbolNames[i] = symbol.Name
 	}
+	signature, err := getSignature(machoFile)
+	if err != nil {
+		return nil, err
+	}
 
 	sections := make([]Section, len(machoFile.Sections))
 	for i, section := range machoFile.Sections {
@@ -140,6 +151,7 @@ func parse(machoFile *macho.File) (*Architecture, error) {
 		Imports:   importSymbolNames,
 		Sections:  sections,
 		Packer:    getPacker(machoFile),
+		Signature: signature,
 	}, nil
 }
 

@@ -2,6 +2,8 @@ github.com/blacktop/go-macho v1.1.30 h1:Wh2St776Rtl8ipqxV3TXVUdO6ZOb1R7U/Ep1/H3u
 github.com/blacktop/go-macho v1.1.30/go.mod h1:RFM+BXgCwyvOW0IMF4IFXKQxDbw8URyGrp38uDKGxkQ=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/fullsailor/pkcs7 v0.0.0-20190404230743-d7302db945fa h1:RDBNVkRviHZtvDvId8XSGPu3rmpmSe+wKRcEWNgsfWU=
+github.com/fullsailor/pkcs7 v0.0.0-20190404230743-d7302db945fa/go.mod h1:KnogPXtdwXqoenmZCw6S+25EAm2MkxbG0deNDu4cbSA=
 github.com/go-errors/errors v1.0.2 h1:xMxH9j2fNg/L4hLn/4y3M0IUsn0M6Wbu/Uh9QlOfBh4=
 github.com/go-errors/errors v1.0.2/go.mod h1:psDX2osz5VnTOnFWbDeWwS7yejl+uV3FEWEp4lssFEs=
 github.com/h2non/filetype v1.1.2-0.20210202002709-95e28344e08c h1:qKQMoHGm6MTGxZuwJO17vNBEhZyeKdno3bjh7q90piM=

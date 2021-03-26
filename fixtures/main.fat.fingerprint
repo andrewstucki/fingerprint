@@ -82,7 +82,11 @@
           "_printf",
           "dyld_stub_binder"
         ],
-        "symhash": "e4cce50a95ec8387770df669df413dd2"
+        "symhash": "e4cce50a95ec8387770df669df413dd2",
+        "signature": {
+          "signer": "Elastic Development",
+          "cdhash": "1f422d5c9c00761e89647dba6d601955ba1025f8c16ddbd0a6ccc866c309863a"
+        }
       },
       {
         "cpu": "x86_64",
@@ -159,7 +163,11 @@
           "_printf",
           "dyld_stub_binder"
         ],
-        "symhash": "e4cce50a95ec8387770df669df413dd2"
+        "symhash": "e4cce50a95ec8387770df669df413dd2",
+        "signature": {
+          "signer": "Elastic Development",
+          "cdhash": "555f7221238a1ec80dd843085c48f45f866f8955f6f7edf360c349022a2009e9"
+        }
       }
     ]
   }
