@@ -2,9 +2,11 @@ package macho
 
 import (
 	"crypto/md5"
-	"debug/macho"
 	"encoding/hex"
 	"io"
+
+	macho "github.com/blacktop/go-macho"
+	"github.com/blacktop/go-macho/types"
 
 	"github.com/andrewstucki/fingerprint/internal"
 )
@@ -68,19 +70,19 @@ func Parse(r io.ReaderAt) (*Info, error) {
 }
 
 // the default string translations are gross
-func translateCPU(cpu macho.Cpu) string {
+func translateCPU(cpu types.CPU) string {
 	switch cpu {
-	case macho.Cpu386:
+	case types.CPU386:
 		return "x86"
-	case macho.CpuAmd64:
+	case types.CPUAmd64:
 		return "x86_64"
-	case macho.CpuArm:
+	case types.CPUArm:
 		return "arm"
-	case macho.CpuArm64:
+	case types.CPUArm64:
 		return "arm64"
-	case macho.CpuPpc:
+	case types.CPUPpc:
 		return "ppc"
-	case macho.CpuPpc64:
+	case types.CPUPpc64:
 		return "ppc64"
 	default:
 		return "unknown"
@@ -92,15 +94,16 @@ func parse(machoFile *macho.File) (*Architecture, error) {
 	if err != nil {
 		return nil, err
 	}
-	libraries, err := machoFile.ImportedLibraries()
-	if err != nil {
-		return nil, err
-	}
+	libraries := machoFile.ImportedLibraries()
 	importSymbols, err := machoFile.ImportedSymbols()
 	if err != nil {
 		if _, ok := err.(*macho.FormatError); !ok {
 			return nil, err
 		}
+	}
+	importSymbolNames := make([]string, len(importSymbols))
+	for i, symbol := range importSymbols {
+		importSymbolNames[i] = symbol.Name
 	}
 
 	sections := make([]Section, len(machoFile.Sections))
@@ -131,10 +134,10 @@ func parse(machoFile *macho.File) (*Architecture, error) {
 	}
 
 	return &Architecture{
-		CPU:       translateCPU(machoFile.Cpu),
+		CPU:       translateCPU(machoFile.CPU),
 		Symhash:   symhash,
 		Libraries: libraries,
-		Imports:   importSymbols,
+		Imports:   importSymbolNames,
 		Sections:  sections,
 		Packer:    getPacker(machoFile),
 	}, nil

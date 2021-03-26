@@ -1,10 +1,10 @@
 {
   "mime": "application/x-mach-binary",
-  "ssdeep": "48:vw3PzCeZStRNIKyjGsDUDIvXg3i3aUMZR37ash3tn:vwfzhtUDP3L9n",
-  "md5": "bb6e006d4ceffe99f25d18215862e69e",
-  "sha1": "1c38f58cf13510c697f7656656eaa90a5929fa61",
-  "sha256": "22dcb80056caf7ade1c4f6c67b3e0f7fdfda0204777df7d5e29c0a25aa942685",
-  "size": 24816,
+  "ssdeep": "96:swfzQts1DLu6lx8FPDFcAyYQR0xMJqb3L9uQDLu6lx8FPDv4nXyY02:s3c8VGdvOdL8VvH",
+  "md5": "3a77cfeb394f56d2dee89ce6bc3f14ff",
+  "sha1": "2c7d66a772655329b11de2f8ec8c3e53d5a725f0",
+  "sha256": "3f4f25bcc128f764d0bf4136f5dcda7bb4f39e3458410073ec94a4702bca1e6e",
+  "size": 59584,
   "macho": {
     "architectures": [
       {

@@ -2,14 +2,16 @@ package macho
 
 import (
 	"crypto/md5"
-	"debug/macho"
 	"encoding/hex"
 	"sort"
 	"strings"
+
+	macho "github.com/blacktop/go-macho"
+	"github.com/blacktop/go-macho/types"
 )
 
 func symhash(machoFile *macho.File) (string, error) {
-	if machoFile.Magic == macho.MagicFat {
+	if machoFile.Magic == types.MagicFat {
 		return "", nil
 	}
 	if machoFile.Symtab == nil {
